@@ -1,0 +1,149 @@
+{
+  "site": {
+    "name": "AppTemplate",
+    "tagline": "Plantilla Multilingüe Next.js"
+  },
+  "seo": {
+    "home": {
+      "title": "AppTemplate | Plantilla Multilingüe Next.js",
+      "description": "AppTemplate es una plantilla Next.js lista para producción con soporte multilingüe, SEO optimizado, i18n integrado y exportación estática.",
+      "keywords": "plantilla next.js, plantilla multilingüe, boilerplate i18n, landing page seo, plantilla react, styled-components"
+    },
+    "features": {
+      "title": "Características | AppTemplate — Qué incluye",
+      "description": "Explora todas las características de AppTemplate: enrutamiento i18n, meta SEO, JSON-LD, layout responsive, componentes temáticos y exportación estática.",
+      "keywords": "características next.js, enrutamiento i18n, plantilla seo, componentes react, plantilla styled-components"
+    },
+    "getStarted": {
+      "title": "Comenzar | AppTemplate — Clona y Lanza",
+      "description": "Comienza con AppTemplate. Clona el repositorio, configura tus idiomas y despliega tu sitio multilingüe en minutos.",
+      "keywords": "starter next.js, clonar plantilla, kit multilingüe, inicio rápido i18n"
+    }
+  },
+  "nav": {
+    "home": "Inicio",
+    "features": "Características",
+    "getStarted": "Comenzar"
+  },
+  "hero": {
+    "home": {
+      "title": "Construye Más Rápido. Lanza Más Inteligente.",
+      "subtitle": "AppTemplate es un starter Next.js 14 moderno para sitios de marketing y landing pages multilingües. SEO optimizado, i18n integrado y listo para equipos globales.",
+      "cta": "Comenzar",
+      "badges": ["⚡ Next.js 14", "🌍 i18n Listo", "📱 Mobile-First", "🔍 SEO-Optimizado"],
+      "tags": ["Next.js", "react-i18next", "TypeScript", "Styled Components"]
+    },
+    "features": {
+      "title": "Todo lo que Necesitas para Lanzar",
+      "subtitle": "Explora el conjunto completo de características de AppTemplate — construido con estándares web modernos para mayor productividad.",
+      "cta": "Ver Todas las Características",
+      "badges": ["🧩 Modular", "🎨 Personalizable", "📦 Listo para Usar", "🔧 Configurable"],
+      "tags": ["Componentes", "Temas", "i18n", "SEO"]
+    },
+    "getStarted": {
+      "title": "Comienza en Minutos",
+      "subtitle": "Clona, configura y despliega tu sitio multilingüe en minutos. AppTemplate gestiona el enrutamiento, las traducciones y el SEO.",
+      "cta": "Clonar en GitHub",
+      "badges": ["🚀 Configuración Rápida", "📝 Config Simple", "💻 Developer Friendly", "🌐 Despliega en Cualquier Lugar"],
+      "tags": ["git clone", "npm install", "next dev", "vercel deploy"]
+    }
+  },
+  "about": {
+    "title": "¿Por qué AppTemplate?",
+    "subtitle": "Listo para producción desde el primer día",
+    "description": "AppTemplate combina Next.js 14, styled-components y react-i18next para darte un sitio multilingüe listo para producción desde el primer momento.",
+    "items": [
+      { "title": "Next.js 14", "text": "Exportación estática, Pages Router, optimizado para rendimiento y SEO." },
+      { "title": "i18n Integrado", "text": "Soporte multilingüe con next-i18next y detección automática del idioma del navegador." },
+      { "title": "SEO Optimizado", "text": "Meta tags, Open Graph, Twitter Cards, datos estructurados JSON-LD, hreflang, URLs canónicas." },
+      { "title": "Styled Components", "text": "Sistema de temas completo con soporte SSR, design tokens y estilos globales." },
+      { "title": "TypeScript", "text": "Páginas y utilidades completamente tipadas para una mejor experiencia de desarrollo." },
+      { "title": "Exportación Estática", "text": "Despliega en cualquier lugar — Vercel, Netlify, GitHub Pages, S3, Cloudflare Pages." }
+    ]
+  },
+  "featuredItems": {
+    "sectionTitle": "Características Principales",
+    "sectionSubtitle": "Qué incluye esta plantilla",
+    "articleTitle": "Un Stack Moderno para Equipos Modernos",
+    "articleText": "AppTemplate viene con una selección cuidadosa de herramientas que funcionan bien juntas. Cada característica está diseñada para ahorrarte tiempo y ayudarte a construir mejores productos multilingües.",
+    "items": [
+      { "title": "Enrutamiento por Locale", "tag": "Next.js", "description": "Enrutamiento dinámico [locale] con generación de rutas estáticas para cada idioma." },
+      { "title": "Sistema de Temas", "tag": "Styled Components", "description": "Design tokens para colores, tipografía, espaciado, sombras y breakpoints." },
+      { "title": "Traducciones", "tag": "react-i18next", "description": "Traducciones en JSON por namespace con fallback automático de idioma." },
+      { "title": "SEO Head", "tag": "next/head", "description": "Configuración SEO completa con Open Graph, JSON-LD, Twitter Cards y hreflang." },
+      { "title": "Biblioteca de Componentes", "tag": "Reutilizable", "description": "Header, Footer, Hero, Cards, Botones, Modals, Banners — listos para usar." },
+      { "title": "Exportación Estática", "tag": "Despliegue", "description": "Construye como sitio estático y despliega en cualquier proveedor de hosting." }
+    ]
+  },
+  "promoSection": {
+    "sectionTitle": "Qué Incluye",
+    "sectionSubtitle": "Todo para un lanzamiento listo para producción",
+    "items": [
+      { "title": "Licencia MIT", "badge": "Gratis", "text": "Usa AppTemplate en proyectos personales y comerciales sin restricciones." },
+      { "title": "TypeScript Listo", "badge": "Tipado", "text": "Soporte TypeScript completo en páginas y componentes para una experiencia segura." },
+      { "title": "Pack SEO", "badge": "Integrado", "text": "Configuración SEO completa: meta tags, Open Graph, Twitter Cards, JSON-LD." },
+      { "title": "Dos Idiomas", "badge": "i18n", "text": "Inglés y español incluidos. Agrega más idiomas en minutos." },
+      { "title": "Diseño Responsive", "badge": "Mobile-First", "text": "Layout completamente responsive optimizado para móvil, tablet y escritorio." },
+      { "title": "Tema Oscuro", "badge": "Estilado", "text": "Hermoso tema oscuro con sistema de design tokens listo para personalizar." }
+    ],
+    "terms": "Esta plantilla es open source y se proporciona tal cual. Personalízala para tu producto."
+  },
+  "integrations": {
+    "sectionTitle": "Funciona con Tu Stack",
+    "sectionSubtitle": "Despliega en cualquier lugar, integra con cualquier servicio",
+    "methods": ["Vercel", "Netlify", "GitHub Pages", "AWS S3", "Cloudflare Pages"],
+    "stepsTitle": "Cómo Empezar",
+    "steps": [
+      { "step": "1", "title": "Clonar", "text": "Clona el repositorio en tu máquina local con git clone." },
+      { "step": "2", "title": "Instalar", "text": "Ejecuta npm install o pnpm install para configurar todas las dependencias." },
+      { "step": "3", "title": "Configurar", "text": "Actualiza next-i18next.config.js con tus locales y agrega archivos de traducción." },
+      { "step": "4", "title": "Desplegar", "text": "Ejecuta npm run build y despliega en tu proveedor de hosting preferido." }
+    ],
+    "securityTitle": "Rendimiento y Buenas Prácticas",
+    "securityItems": [
+      "Generación estática (SSG) para máximo rendimiento",
+      "Detección automática del idioma del navegador y redirección",
+      "Optimización de fuentes con font-display: swap",
+      "Optimización de imágenes con el componente Next.js Image",
+      "Markup accesible con etiquetas ARIA"
+    ],
+    "faq": [
+      { "q": "¿Puedo usar esto con App Router?", "a": "Esta plantilla usa Pages Router. Puedes migrar a App Router con next-intl para una configuración i18n más moderna." },
+      { "q": "¿Cómo agrego un nuevo idioma?", "a": "Agrega el locale a next-i18next.config.js y crea una nueva carpeta en public/locales/ con tus archivos de traducción." },
+      { "q": "¿Es gratis de usar?", "a": "Sí. AppTemplate tiene licencia MIT. Úsalo libremente en proyectos personales y comerciales." },
+      { "q": "¿Qué plataformas de despliegue son compatibles?", "a": "Cualquier plataforma que soporte archivos estáticos: Vercel, Netlify, GitHub Pages, AWS S3, Cloudflare Pages y más." }
+    ]
+  },
+  "getStarted": {
+    "articleTitle": "Cómo Usar AppTemplate",
+    "intro": "AppTemplate está diseñado para llevarte de cero a un sitio multilingüe listo para producción lo más rápido posible.",
+    "sections": [
+      { "title": "Estructura del Proyecto", "text": "Las páginas están en src/pages/[locale]/ — una carpeta por ruta, servida automáticamente para cada idioma. Las traducciones están en public/locales/[lang]/common.json." },
+      { "title": "Agregar Traducciones", "text": "Edita los archivos JSON en public/locales/ para agregar tu propio contenido. La plantilla usa un único namespace common para simplificar." },
+      { "title": "Personalizar el Tema", "text": "Edita src/styles/theme.js para actualizar colores, fuentes, espaciado y breakpoints. Todos los componentes leen del tema via ThemeProvider." },
+      { "title": "Configuración SEO", "text": "Actualiza las claves seo en tus archivos de locale y reemplaza YOUR_DOMAIN con tu dominio real en los archivos de página." }
+    ],
+    "faq": [
+      { "q": "¿Cómo cambio el idioma predeterminado?", "a": "Actualiza defaultLocale en next-i18next.config.js. La app redirigirá a los usuarios a su idioma del navegador automáticamente." },
+      { "q": "¿Puedo eliminar un idioma?", "a": "Sí. Elimina el locale del array locales en next-i18next.config.js y borra la carpeta correspondiente en public/locales/." },
+      { "q": "¿Cómo personalizo el tema de color?", "a": "Edita src/styles/theme.js. El objeto colors contiene todos los design tokens usados en toda la plantilla." },
+      { "q": "¿Soporta SSR?", "a": "La configuración predeterminada usa exportación estática (SSG). Elimina output: 'export' de next.config.js para habilitar SSR." },
+      { "q": "¿Cómo agrego nuevas páginas?", "a": "Crea un nuevo archivo en src/pages/[locale]/ y agrega las traducciones correspondientes en tus archivos JSON de locale." }
+    ]
+  },
+  "footer": {
+    "aboutTitle": "AppTemplate",
+    "aboutText": "Una plantilla Next.js moderna y multilingüe. Open source, licencia MIT, libre de usar y personalizar.",
+    "linksTitle": "Páginas",
+    "links": {
+      "home": "Inicio",
+      "features": "Características",
+      "getStarted": "Comenzar"
+    },
+    "resourcesTitle": "Recursos",
+    "ctaTitle": "Empieza a Construir Hoy",
+    "ctaText": "Clona el repositorio y lanza tu sitio multilingüe en minutos.",
+    "ctaButton": "Ver en GitHub",
+    "legal": "© 2024 AppTemplate. Licencia MIT. Libre de usar y modificar."
+  }
+}
