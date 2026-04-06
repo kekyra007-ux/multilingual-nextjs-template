@@ -57,11 +57,11 @@ import {
   FAQItem,
   FAQQuestion,
   FAQAnswer,
-} from "./Integrations.styled"";
+} from "./Integrations.styled";
 import Link from "../Link";
 import Button from "../UI/Button";
 
-export const Payments = () => {
+export const Integrations = () => {
   const { t } = useTranslation("common");
 
   return (

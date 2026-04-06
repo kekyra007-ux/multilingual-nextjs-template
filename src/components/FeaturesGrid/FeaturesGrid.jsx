@@ -54,11 +54,11 @@ import {
   DeepGuideTitle,
   DeepGuideParagraph,
   DeepGuideList,
-} from "./FeaturesGrid.styled"";
+} from "./FeaturesGrid.styled";
 import { tArray } from "@/utils/i18nSafe";
 import Button from "../UI/Button";
 
-export const BettingHub = () => {
+export const FeaturesGrid = () => {
   const { t } = useTranslation("common");
 
   const stats = tArray(t, "bettingHub.stats");

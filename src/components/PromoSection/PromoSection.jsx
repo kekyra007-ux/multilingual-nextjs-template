@@ -40,11 +40,11 @@ import {
   TermsList,
   TermsItem,
   CTAGroup,
-} from "./PromoSection.styled"";
+} from "./PromoSection.styled";
 import Button from "../UI/Button";
 import { FancyButton } from "../UI/FancyButton";
 
-export const Bonuses = () => {
+export const PromoSection = () => {
   const { t } = useTranslation("common");
   const bonusGradients = [
     /* Neon Orange → Burnt Orange (main promo / high-energy) */

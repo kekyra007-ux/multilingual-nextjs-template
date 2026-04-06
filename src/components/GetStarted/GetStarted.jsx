@@ -38,12 +38,12 @@ import {
   LongArticleCTA,
   LongArticleCTATitle,
   LongArticleCTAText,
-} from "./GetStarted.styled"";
+} from "./GetStarted.styled";
 
 import Button from "../UI/Button";
 import { tArray } from "@/utils/i18nSafe";
 
-export const Register = () => {
+export const GetStarted = () => {
   const { t } = useTranslation("common");
   const [expandedFAQ, setExpandedFAQ] = useState(null);
 

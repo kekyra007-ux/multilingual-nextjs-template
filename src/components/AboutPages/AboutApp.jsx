@@ -39,7 +39,7 @@ import {
   DeepGuideTitle,
   DeepGuideParagraph,
   DeepGuideList,
-} from "./FeaturesGrid.styled"";
+} from "./FeaturesGrid.styled";
 import Button from "../UI/Button";
 
 const AboutPages = ({ t }) => {
