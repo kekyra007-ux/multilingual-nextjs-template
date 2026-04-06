@@ -40,7 +40,7 @@ import {
   BetDescription,
   BetOdd,
   FeaturesSection,
-  FeaturesGrid,
+  FeaturesGridStyled,
   FeatureCard,
   FeatureIcon,
   FeatureTitle,

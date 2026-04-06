@@ -26,7 +26,7 @@ import {
   ArticleTitle,
   ArticleBlock,
   InfoArticle,
-  PromoSection,
+  PromoSectionStyled,
   PromoCard,
   PromoHeader,
   PromoTag,
@@ -102,7 +102,7 @@ export const PromoSection = () => {
           </BannerImage>
         </HeroBanner>
         {/* Промо-акции */}
-        <PromoSection>
+        <PromoSectionStyled>
           {t("bonuses.promos", { returnObjects: true }).map((promo, index) => (
             <PromoCard key={index}>
               <PromoHeader>
@@ -130,7 +130,7 @@ export const PromoSection = () => {
               </PromoFooter>
             </PromoCard>
           ))}
-        </PromoSection>
+        </PromoSectionStyled>
         {/* Основные бонусы */}
         <BonusGrid>
           {t("bonuses.cards", { returnObjects: true }).map((bonus, index) => (
