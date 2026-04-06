@@ -65,4 +65,4 @@ const FloatingCTA = ({
   );
 };
 
-export default ReferralFloatingButton;
+export default FloatingCTA;
