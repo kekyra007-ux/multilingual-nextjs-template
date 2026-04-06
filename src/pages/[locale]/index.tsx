@@ -4,7 +4,6 @@ import { Hero } from "@/components/Hero/Hero";
 import { AboutSection } from "@/components/AboutSection/AboutSection";
 import { Integrations } from "@/components/Integrations/Integrations";
 import { getStaticPaths, makeStaticProps } from "../../../lib/getStatic";
-import { FeaturedItems } from "@/components/FeaturedItems/FeaturedItems";
 import { useRouter } from "next/router";
 import { PromoSection } from "@/components/PromoSection/PromoSection";
 
@@ -150,16 +149,14 @@ export default function Home() {
 
       <main>
         <Hero />
-        <Banner
-          image="/welcome-banner.png"
-          priority
-          imgTitle="AppTemplate Homepage"
-          alt="AppTemplate homepage"
-        >
-          <></>
-        </Banner>
+
         <AboutSection />
-        <FeaturedItems t={t} />
+        <Banner
+          image="/banner.jpg"
+          kicker="Premium Template"
+          title="Launch faster with a bold multilingual experience"
+          subtitle="Modern landing page architecture with elegant visuals, refined motion and scalable content blocks."
+        ></Banner>
         <PromoSection />
         <Integrations />
       </main>

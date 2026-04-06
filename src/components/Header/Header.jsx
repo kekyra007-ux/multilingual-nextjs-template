@@ -11,7 +11,12 @@ import {
   HeaderWrapper,
   HeaderContainer,
   TopBar,
-  LogoWrapper,
+  LogoTextGroup,
+  LogoMark,
+  LogoTitle,
+  LogoSubtitle,
+  LogoGlow,
+  LogoLink,
   LanguageSwitcher,
   NavBar,
   Nav,
@@ -34,7 +39,11 @@ export const Header = () => {
 
   const navItems = [
     { href: "/", label: t("nav.home"), icon: "/icons/home.svg" },
-    { href: "/features", label: t("nav.features"), icon: "/icons/app.svg" },
+    {
+      href: "/features",
+      label: t("nav.features"),
+      icon: "/icons/features.svg",
+    },
     {
       href: "/get-started",
       label: t("nav.getStarted"),
@@ -47,9 +56,14 @@ export const Header = () => {
       <HeaderContainer>
         <TopBar>
           <Link href="/" passHref legacyBehavior>
-            <LogoWrapper>
-              <img src="/logo.png" alt={t("site.name")} />
-            </LogoWrapper>
+            <LogoLink aria-label={t("site.name")}>
+              <LogoMark>AT</LogoMark>
+              <LogoTextGroup>
+                <LogoTitle>{t("site.name")}</LogoTitle>
+                <LogoSubtitle>Multilingual Next.js Starter</LogoSubtitle>
+              </LogoTextGroup>
+              <LogoGlow />
+            </LogoLink>
           </Link>
 
           <LanguageSwitcher>

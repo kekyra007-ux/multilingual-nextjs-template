@@ -1,192 +1,141 @@
-"use client";
-import { useState } from "react";
+import React, { useState } from "react";
 import { useTranslation } from "next-i18next";
-import {
-  SlotsWrapper,
-  SlotsContainer,
-  SectionHeader,
-  SectionTitle,
-  LongArticleSection,
-  LongArticleInner,
-  LongArticleHeader,
-  LongArticleTitle,
-  LongArticleSubtitle,
-  FAQSection,
-  FAQGrid,
-  FAQItem,
-  FAQQuestion,
-  FAQAnswer,
-  LongArticleGrid,
-  LongArticleAside,
-  LongArticleAsideTitle,
-  LongArticleTOC,
-  LongArticleTOCItem,
-  LongArticleMiniList,
-  LongArticleMiniItem,
-  LongArticleBody,
-  LongArticleBlock,
-  LongArticleH3,
-  LongArticleP,
-  LongArticleList,
-  LongArticleLi,
-  LongArticleLiTitle,
-  LongArticleLiText,
-  LongArticleCallouts,
-  LongArticleCallout,
-  LongArticleCalloutTop,
-  LongArticleCalloutText,
-  LongArticleCTA,
-  LongArticleCTATitle,
-  LongArticleCTAText,
-} from "./GetStarted.styled";
-
 import Button from "../UI/Button";
-import { tArray } from "@/utils/i18nSafe";
+import * as S from "./GetStarted.styled";
 
 export const GetStarted = () => {
   const { t } = useTranslation("common");
-  const [expandedFAQ, setExpandedFAQ] = useState(null);
+  const data = t("getStarted", { returnObjects: true }) || {};
 
-  // ===== Long Article (REGISTER) =====
-  const longArticle = t("registerPage.longArticle", { returnObjects: true });
-  const longArticleTOC = tArray(t, "registerPage.longArticle.toc");
-  const longArticleBullets = tArray(t, "registerPage.longArticle.bullets");
-  const longArticleSections = tArray(t, "registerPage.longArticle.sections");
-  const longArticleCallouts = tArray(t, "registerPage.longArticle.callouts");
+  const badges = data?.badges || [];
+  const rows = data?.rows || [];
+  const accordion = data?.accordion || {};
+  const accordionItems = accordion?.items || [];
 
-  // ===== FAQ (REGISTER) =====
-  const faqs = tArray(t, "registerPage.faq.items");
+  const [openIndex, setOpenIndex] = useState(0);
 
-  const toggleFAQ = (index) => {
-    setExpandedFAQ(expandedFAQ === index ? null : index);
+  const handleToggle = (index) => {
+    setOpenIndex((prev) => (prev === index ? -1 : index));
   };
 
   return (
-    <SlotsWrapper>
-      <SlotsContainer>
-        <LongArticleSection>
-          <LongArticleInner>
-            <LongArticleHeader>
-              <LongArticleTitle>{longArticle?.title}</LongArticleTitle>
-              <LongArticleSubtitle>{longArticle?.subtitle}</LongArticleSubtitle>
-            </LongArticleHeader>
+    <S.SectionWrapper>
+      <S.BackgroundGlowTop />
+      <S.BackgroundGlowBottom />
+      <S.GridPattern />
 
-            <LongArticleGrid>
-              {/* Sticky TOC */}
-              <LongArticleAside>
-                <LongArticleAsideTitle>
-                  {longArticle?.tocTitle}
-                </LongArticleAsideTitle>
+      <S.Container>
+        <S.Badge>{data?.eyebrow || "Featured"}</S.Badge>
 
-                <LongArticleTOC>
-                  {longArticleTOC.map((item, idx) => (
-                    <LongArticleTOCItem key={idx} href={item.href}>
-                      <span>{item.icon}</span>
-                      {item.label}
-                    </LongArticleTOCItem>
-                  ))}
-                </LongArticleTOC>
+        <S.Header>
+          <S.TitleWrap>
+            <S.TitleAccent />
+            <S.Title>{data?.title}</S.Title>
+          </S.TitleWrap>
+          <S.Subtitle>{data?.subtitle}</S.Subtitle>
+        </S.Header>
 
-                {!!longArticleBullets.length && (
-                  <LongArticleMiniList>
-                    {longArticleBullets.map((b, idx) => (
-                      <LongArticleMiniItem key={idx}>
-                        <span>{b.icon}</span>
-                        {b.text}
-                      </LongArticleMiniItem>
-                    ))}
-                  </LongArticleMiniList>
-                )}
-              </LongArticleAside>
+        <S.Panel>
+          <S.BadgesRow>
+            {badges.map((item, index) => (
+              <S.InfoBadge key={index}>{item}</S.InfoBadge>
+            ))}
+          </S.BadgesRow>
 
-              {/* Body */}
-              <LongArticleBody>
-                {(longArticleSections || []).map((sec, idx) => (
-                  <LongArticleBlock key={idx} id={sec.id}>
-                    <LongArticleH3>
-                      {sec.icon} {sec.title}
-                    </LongArticleH3>
-
-                    {(sec.paragraphs || []).map((p, i) => (
-                      <LongArticleP key={i}>{p}</LongArticleP>
-                    ))}
-
-                    {!!(sec.list || []).length && (
-                      <LongArticleList>
-                        {sec.list.map((li, i) => (
-                          <LongArticleLi key={i}>
-                            <span>{li.icon}</span>
-                            <div>
-                              <LongArticleLiTitle>
-                                {li.title}
-                              </LongArticleLiTitle>
-                              <LongArticleLiText>{li.text}</LongArticleLiText>
-                            </div>
-                          </LongArticleLi>
-                        ))}
-                      </LongArticleList>
-                    )}
-                  </LongArticleBlock>
-                ))}
-
-                {!!longArticleCallouts.length && (
-                  <LongArticleCallouts>
-                    {longArticleCallouts.map((c, idx) => (
-                      <LongArticleCallout key={idx}>
-                        <LongArticleCalloutTop>
-                          <span>{c.icon}</span>
-                          <strong>{c.title}</strong>
-                        </LongArticleCalloutTop>
-                        <LongArticleCalloutText>
-                          {c.text}
-                        </LongArticleCalloutText>
-                      </LongArticleCallout>
-                    ))}
-                  </LongArticleCallouts>
-                )}
-
-                {!!longArticle?.cta?.title && (
-                  <LongArticleCTA>
-                    <LongArticleCTATitle>
-                      {longArticle.cta.title}
-                    </LongArticleCTATitle>
-                    <LongArticleCTAText>
-                      {longArticle.cta.text}
-                    </LongArticleCTAText>
-                    <Button
-                      as="a"
-                      href={longArticle.cta.href}
+          <S.Table>
+            {rows.map((row, index) => (
+              <S.TableRow key={index}>
+                <S.LabelCell>{row?.label}</S.LabelCell>
+                <S.ValueCell>
+                  {row?.href ? (
+                    <S.ValueLink
+                      href={row.href}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      {longArticle.cta.button}
-                    </Button>
-                  </LongArticleCTA>
-                )}
-              </LongArticleBody>
-            </LongArticleGrid>
-          </LongArticleInner>
-        </LongArticleSection>
-
-        {/* FAQ Section */}
-        <FAQSection>
-          <SectionHeader>
-            <SectionTitle>{t("registerPage.faq.title")}</SectionTitle>
-          </SectionHeader>
-
-          <FAQGrid>
-            {faqs.map((faq, index) => (
-              <FAQItem key={index} onClick={() => toggleFAQ(index)}>
-                <FAQQuestion $expanded={expandedFAQ === index}>
-                  {faq.question}
-                  <span>{expandedFAQ === index ? "−" : "+"}</span>
-                </FAQQuestion>
-                {expandedFAQ === index && <FAQAnswer>{faq.answer}</FAQAnswer>}
-              </FAQItem>
+                      {row?.value}
+                    </S.ValueLink>
+                  ) : (
+                    row?.value
+                  )}
+                </S.ValueCell>
+              </S.TableRow>
             ))}
-          </FAQGrid>
-        </FAQSection>
-      </SlotsContainer>
-    </SlotsWrapper>
+          </S.Table>
+
+          <S.Actions>
+            <Button as="a" href={data?.primaryHref || "/"}>
+              {data?.primaryCta}
+            </Button>
+            <Button
+              as="a"
+              href={data?.secondaryHref || "/"}
+              $variant="secondary"
+            >
+              {data?.secondaryCta}
+            </Button>
+          </S.Actions>
+        </S.Panel>
+
+        <S.AccordionSection>
+          <S.AccordionBadge>
+            {accordion?.eyebrow || "Quick Start"}
+          </S.AccordionBadge>
+
+          <S.AccordionHeader>
+            <S.TitleWrap>
+              <S.TitleAccent />
+              <S.Title>{accordion?.title}</S.Title>
+            </S.TitleWrap>
+            <S.Subtitle>{accordion?.subtitle}</S.Subtitle>
+          </S.AccordionHeader>
+
+          <S.AccordionPanel>
+            <S.AccordionIntro>{accordion?.intro}</S.AccordionIntro>
+
+            <S.AccordionList>
+              {accordionItems.map((item, index) => {
+                const isOpen = openIndex === index;
+
+                return (
+                  <S.AccordionItem key={index} $open={isOpen}>
+                    <S.AccordionTrigger
+                      type="button"
+                      onClick={() => handleToggle(index)}
+                      aria-expanded={isOpen}
+                    >
+                      <S.StepNumber>{item?.step}</S.StepNumber>
+                      <S.StepTitle>{item?.title}</S.StepTitle>
+                      <S.StepIcon $open={isOpen}>+</S.StepIcon>
+                    </S.AccordionTrigger>
+
+                    {isOpen && (
+                      <S.AccordionContent>
+                        <S.AccordionText>{item?.text}</S.AccordionText>
+                      </S.AccordionContent>
+                    )}
+                  </S.AccordionItem>
+                );
+              })}
+            </S.AccordionList>
+
+            <S.AccordionActions>
+              <Button as="a" href={accordion?.primaryHref || "/"}>
+                {accordion?.primaryCta}
+              </Button>
+              <Button
+                as="a"
+                href={accordion?.secondaryHref || "/"}
+                $variant="secondary"
+              >
+                {accordion?.secondaryCta}
+              </Button>
+            </S.AccordionActions>
+          </S.AccordionPanel>
+        </S.AccordionSection>
+      </S.Container>
+    </S.SectionWrapper>
   );
 };
+
+export default GetStarted;

@@ -69,8 +69,8 @@ export default function Features() {
       />
 
       <main>
-        <Hero page="features" />
-        <FeaturedItems t={t} />
+        <Hero />
+        <FeaturedItems />
       </main>
     </>
   );

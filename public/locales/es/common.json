@@ -25,112 +25,511 @@
     "features": "Características",
     "getStarted": "Comenzar"
   },
+
   "hero": {
     "home": {
-      "title": "Construye Más Rápido. Lanza Más Inteligente.",
-      "subtitle": "AppTemplate es un starter Next.js 14 moderno para sitios de marketing y landing pages multilingües. SEO optimizado, i18n integrado y listo para equipos globales.",
-      "cta": "Comenzar",
-      "badges": ["⚡ Next.js 14", "🌍 i18n Listo", "📱 Mobile-First", "🔍 SEO-Optimizado"],
-      "tags": ["Next.js", "react-i18next", "TypeScript", "Styled Components"]
+      "brand": "AppTemplate",
+      "title": "<span>Next.js 14</span> starter multilingüe para páginas de marketing modernas",
+      "subtitle": "Optimizado para SEO, preparado para i18n y diseñado para landing pages, lanzamientos de producto y equipos globales que necesitan una base frontend rápida y escalable.",
+      "pills": ["i18n integrado", "Listo para SEO", "Despliegue rápido"],
+      "primaryCta": "Comenzar",
+      "primaryHref": "/get-started",
+      "secondaryCta": "Ver funciones",
+      "secondaryHref": "/features",
+      "tertiaryCta": "Explorar configuración",
+      "tertiaryHref": "/get-started",
+      "quickStats": ["UX estilo RTP", "Listo para SSL", "Escalable 24/7"],
+      "panelItems": [
+        {
+          "label": "Hot",
+          "value": "Starter de Next.js 14"
+        },
+        {
+          "label": "Live",
+          "value": "Enrutamiento multilingüe integrado"
+        },
+        {
+          "label": "Launch",
+          "value": "Flujo de despliegue rápido"
+        }
+      ],
+      "tickerItems": [
+        "Estructura optimizada para SEO",
+        "Secciones de marketing reutilizables",
+        "Flujo de contenido listo para el mercado global",
+        "UI responsive mobile-first",
+        "Soporte para despliegue estático rápido"
+      ]
     },
     "features": {
-      "title": "Todo lo que Necesitas para Lanzar",
-      "subtitle": "Explora el conjunto completo de características de AppTemplate — construido con estándares web modernos para mayor productividad.",
-      "cta": "Ver Todas las Características",
-      "badges": ["🧩 Modular", "🎨 Personalizable", "📦 Listo para Usar", "🔧 Configurable"],
-      "tags": ["Componentes", "Temas", "i18n", "SEO"]
+      "brand": "AppTemplate",
+      "title": "<span>Funciones potentes</span> para landing pages multilingües",
+      "subtitle": "Descubre las secciones, flujos de trabajo y estructura integrada que ayudan a los equipos a lanzar sitios web multilingües pulidos más rápido y con menos configuración.",
+      "pills": [
+        "Bloques reutilizables",
+        "Contenido escalable",
+        "Arquitectura limpia"
+      ],
+      "primaryCta": "Explorar funciones",
+      "primaryHref": "/features",
+      "secondaryCta": "Comenzar",
+      "secondaryHref": "/get-started",
+      "tertiaryCta": "Volver al inicio",
+      "tertiaryHref": "/",
+      "quickStats": [
+        "Secciones flexibles",
+        "Control SEO",
+        "Listo para equipos"
+      ],
+      "panelItems": [
+        {
+          "label": "Core",
+          "value": "Secciones de UI reutilizables"
+        },
+        {
+          "label": "I18n",
+          "value": "Estructura pensada para traducciones"
+        },
+        {
+          "label": "Scale",
+          "value": "Diseñado para contenido en crecimiento"
+        }
+      ],
+      "tickerItems": [
+        "Base inicial rica en funciones",
+        "Enrutamiento limpio y separación de contenido",
+        "Flujo flexible para construir páginas",
+        "Mejor mantenibilidad para equipos",
+        "UI consistente en todos los idiomas"
+      ]
     },
     "getStarted": {
-      "title": "Comienza en Minutos",
-      "subtitle": "Clona, configura y despliega tu sitio multilingüe en minutos. AppTemplate gestiona el enrutamiento, las traducciones y el SEO.",
-      "cta": "Clonar en GitHub",
-      "badges": ["🚀 Configuración Rápida", "📝 Config Simple", "💻 Developer Friendly", "🌐 Despliega en Cualquier Lugar"],
-      "tags": ["git clone", "npm install", "next dev", "vercel deploy"]
+      "brand": "AppTemplate",
+      "title": "<span>Empieza rápido</span> y lanza con confianza",
+      "subtitle": "Configura tu proyecto multilingüe, organiza las traducciones y despliega más rápido con una estructura clara lista para casos reales de marketing.",
+      "pills": ["Configuración rápida", "Flujo claro", "Listo para desplegar"],
+      "primaryCta": "Empezar ahora",
+      "primaryHref": "/get-started",
+      "secondaryCta": "Ver funciones",
+      "secondaryHref": "/features",
+      "tertiaryCta": "Abrir inicio",
+      "tertiaryHref": "/",
+      "quickStats": [
+        "Configuración rápida",
+        "Flujo de contenido simple",
+        "Listo para producción"
+      ],
+      "panelItems": [
+        {
+          "label": "Step 1",
+          "value": "Clona e instala las dependencias"
+        },
+        {
+          "label": "Step 2",
+          "value": "Configura los idiomas y el contenido"
+        },
+        {
+          "label": "Step 3",
+          "value": "Compila y despliega en cualquier lugar"
+        }
+      ],
+      "tickerItems": [
+        "Experiencia de lanzamiento guiada",
+        "Estructura de contenido centrada en traducciones",
+        "Compatibilidad moderna de despliegue",
+        "UI responsive desde el inicio",
+        "Ruta rápida desde la configuración hasta la publicación"
+      ]
     }
   },
-  "about": {
-    "title": "¿Por qué AppTemplate?",
-    "subtitle": "Listo para producción desde el primer día",
-    "description": "AppTemplate combina Next.js 14, styled-components y react-i18next para darte un sitio multilingüe listo para producción desde el primer momento.",
-    "items": [
-      { "title": "Next.js 14", "text": "Exportación estática, Pages Router, optimizado para rendimiento y SEO." },
-      { "title": "i18n Integrado", "text": "Soporte multilingüe con next-i18next y detección automática del idioma del navegador." },
-      { "title": "SEO Optimizado", "text": "Meta tags, Open Graph, Twitter Cards, datos estructurados JSON-LD, hreflang, URLs canónicas." },
-      { "title": "Styled Components", "text": "Sistema de temas completo con soporte SSR, design tokens y estilos globales." },
-      { "title": "TypeScript", "text": "Páginas y utilidades completamente tipadas para una mejor experiencia de desarrollo." },
-      { "title": "Exportación Estática", "text": "Despliega en cualquier lugar — Vercel, Netlify, GitHub Pages, S3, Cloudflare Pages." }
-    ]
+  "home": {
+    "about": {
+      "title": "Creado para sitios web modernos de marketing multilingüe",
+      "text": "AppTemplate es un starter flexible de Next.js 14 creado para equipos que necesitan landing pages rápidas, escalables y optimizadas para SEO con internacionalización integrada desde el primer día.",
+      "feature1": "Base de Next.js 14 para rendimiento moderno y flujo de trabajo de desarrollo",
+      "feature2": "Estructura multilingüe integrada para entrega global de contenido",
+      "feature3": "Arquitectura lista para SEO en marketing y landing pages",
+      "feature4": "Organización limpia de componentes para una personalización rápida",
+      "feature5": "Lo bastante flexible para startups, agencias y equipos internos",
+      "feature6": "Optimizado para lanzamientos rápidos y escalado de contenido a largo plazo",
+      "extraParagraph": "Lanzar un sitio web multilingüe normalmente requiere equilibrar velocidad, estructura y mantenibilidad. AppTemplate ayuda a simplificar ese proceso con una base lista para usar adaptada a casos modernos de marketing.",
+      "extraParagraph2": "En lugar de montar desde cero el enrutamiento, las traducciones, las secciones de página y la configuración SEO, los equipos pueden comenzar con una base lista para producción que ya soporta crecimiento internacional.",
+      "extraParagraph3": "La plantilla es especialmente útil para páginas de producto, sitios SaaS, landing pages de startups y presentaciones de marca que necesitan funcionar en múltiples regiones e idiomas.",
+      "extraParagraph4": "Su estructura está diseñada para mantener el contenido fácil de gestionar mientras conserva una experiencia frontend pulida para los visitantes en dispositivos de escritorio y móviles.",
+      "extraParagraph5": "Como el proyecto está basado en Next.js 14, encaja de forma natural en flujos de trabajo frontend modernos y ofrece a los desarrolladores un punto de partida limpio para seguir ampliándolo.",
+      "extraParagraph6": "Los equipos de marketing se benefician de una configuración fácil de editar, mientras que los desarrolladores se benefician de secciones reutilizables, organización escalable y una base técnica fiable.",
+      "extraParagraph7": "Tanto si estás creando una página de campaña sencilla como un sitio multilingüe más amplio, la plantilla ayuda a reducir el tiempo de configuración y mantiene el proyecto alineado con las mejores prácticas actuales.",
+      "extraParagraph8": "Esto convierte a AppTemplate en una opción práctica para equipos que quieren moverse más rápido, publicar globalmente y mantener una calidad consistente entre idiomas y mercados.",
+      "extraButton": "Explorar plantilla",
+      "extra2": {
+        "title": "Lista para equipos globales y lanzamientos rápidos de producto",
+        "text": "Desde landing pages localizadas hasta sitios web internacionales de producto, AppTemplate ofrece a los equipos un sólido punto de partida con una estructura de UI moderna, organización de contenido escalable y arquitectura lista para desplegar."
+      }
+    }
   },
-  "featuredItems": {
-    "sectionTitle": "Características Principales",
-    "sectionSubtitle": "Qué incluye esta plantilla",
-    "articleTitle": "Un Stack Moderno para Equipos Modernos",
-    "articleText": "AppTemplate viene con una selección cuidadosa de herramientas que funcionan bien juntas. Cada característica está diseñada para ahorrarte tiempo y ayudarte a construir mejores productos multilingües.",
-    "items": [
-      { "title": "Enrutamiento por Locale", "tag": "Next.js", "description": "Enrutamiento dinámico [locale] con generación de rutas estáticas para cada idioma." },
-      { "title": "Sistema de Temas", "tag": "Styled Components", "description": "Design tokens para colores, tipografía, espaciado, sombras y breakpoints." },
-      { "title": "Traducciones", "tag": "react-i18next", "description": "Traducciones en JSON por namespace con fallback automático de idioma." },
-      { "title": "SEO Head", "tag": "next/head", "description": "Configuración SEO completa con Open Graph, JSON-LD, Twitter Cards y hreflang." },
-      { "title": "Biblioteca de Componentes", "tag": "Reutilizable", "description": "Header, Footer, Hero, Cards, Botones, Modals, Banners — listos para usar." },
-      { "title": "Exportación Estática", "tag": "Despliegue", "description": "Construye como sitio estático y despliega en cualquier proveedor de hosting." }
-    ]
+
+  "featured": {
+    "badgeItems": [
+      "Listo para Next.js 14",
+      "i18n integrado",
+      "Optimizado para SEO"
+    ],
+    "title": "Planes destacados para lanzamientos multilingües modernos",
+    "subtitle": "Elige la configuración que mejor se adapte a la etapa de tu producto, la escala de contenido y el flujo de trabajo de tu equipo. Diseñado para landing pages, sitios de marketing y despliegues globales.",
+    "plans": [
+      {
+        "tier": "Starter",
+        "value": "Lanza rápido",
+        "title": "Configuración inicial de marketing",
+        "description": "Un punto de entrada práctico para pequeñas páginas de producto y lanzamientos de campañas multilingües con una estructura limpia y cobertura SEO esencial.",
+        "features": [
+          "Se incluyen secciones principales para landing page",
+          "Estructura de contenido preparada para traducciones",
+          "Configuración rápida para páginas de producto y marketing"
+        ],
+        "primaryCta": "Comenzar ahora",
+        "primaryHref": "/register",
+        "secondaryCta": "Ver detalles",
+        "secondaryHref": "/features",
+        "featured": false
+      },
+      {
+        "tier": "Growth",
+        "value": "Escala mejor",
+        "title": "Edición para equipos en crecimiento",
+        "description": "Diseñado para equipos que necesitan flujos de localización más sólidos, secciones reutilizables y una estructura escalable para mercados en expansión.",
+        "features": [
+          "Bloques de página reutilizables para producir más rápido",
+          "Mejor escalado de contenido en múltiples idiomas",
+          "Estructura flexible para campañas y actualizaciones"
+        ],
+        "primaryCta": "Construye más rápido",
+        "primaryHref": "/register",
+        "secondaryCta": "Ver beneficios",
+        "secondaryHref": "/features",
+        "featured": true
+      },
+      {
+        "tier": "Advanced",
+        "value": "Llega al mundo",
+        "title": "Stack global avanzado",
+        "description": "Una opción pulida para marcas que preparan lanzamientos internacionales, estrategias de contenido más amplias y una presentación multilingüe de alta calidad.",
+        "features": [
+          "Ideal para posicionamiento global de producto",
+          "Estructura amigable con SEO para múltiples regiones",
+          "Experiencia de desarrollo limpia para crecimiento a largo plazo"
+        ],
+        "primaryCta": "Lanzar globalmente",
+        "primaryHref": "/register",
+        "secondaryCta": "Saber más",
+        "secondaryHref": "/features",
+        "featured": false
+      }
+    ],
+    "guide": {
+      "title": "Por qué los equipos eligen AppTemplate",
+      "text": "AppTemplate ayuda a los equipos a pasar de la idea al lanzamiento con menos fricción de configuración. Combina preparación multilingüe, arquitectura moderna de Next.js y una estructura orientada al marketing que es fácil de ampliar a medida que tu proyecto crece.",
+      "tags": [
+        "Flujo de lanzamiento rápido",
+        "Arquitectura de página lista para SEO",
+        "Estructura de idiomas escalable",
+        "Secciones de contenido reutilizables",
+        "Diseñado para equipos globales"
+      ]
+    },
+    "promo": {
+      "title": "Creado para páginas de marketing de alto impacto",
+      "text": "Desde lanzamientos de startups hasta páginas de marca multilingües, la plantilla ofrece a los equipos una base fiable con gestión flexible de contenido y una estructura frontend moderna.",
+      "stats": [
+        {
+          "value": "14",
+          "label": "Impulsado por Next.js 14"
+        },
+        {
+          "value": "i18n",
+          "label": "Flujo multilingüe integrado"
+        },
+        {
+          "value": "SEO",
+          "label": "Optimizado para visibilidad"
+        }
+      ],
+      "primaryCta": "Comenzar",
+      "primaryHref": "/register",
+      "secondaryCta": "FAQ",
+      "secondaryHref": "/faq"
+    }
   },
+
   "promoSection": {
-    "sectionTitle": "Qué Incluye",
+    "sectionTitle": "Qué incluye",
     "sectionSubtitle": "Todo para un lanzamiento listo para producción",
     "items": [
-      { "title": "Licencia MIT", "badge": "Gratis", "text": "Usa AppTemplate en proyectos personales y comerciales sin restricciones." },
-      { "title": "TypeScript Listo", "badge": "Tipado", "text": "Soporte TypeScript completo en páginas y componentes para una experiencia segura." },
-      { "title": "Pack SEO", "badge": "Integrado", "text": "Configuración SEO completa: meta tags, Open Graph, Twitter Cards, JSON-LD." },
-      { "title": "Dos Idiomas", "badge": "i18n", "text": "Inglés y español incluidos. Agrega más idiomas en minutos." },
-      { "title": "Diseño Responsive", "badge": "Mobile-First", "text": "Layout completamente responsive optimizado para móvil, tablet y escritorio." },
-      { "title": "Tema Oscuro", "badge": "Estilado", "text": "Hermoso tema oscuro con sistema de design tokens listo para personalizar." }
+      {
+        "title": "Licencia MIT",
+        "badge": "Gratis para usar",
+        "text": "Usa AppTemplate en proyectos personales y comerciales sin restricciones."
+      },
+      {
+        "title": "Listo para TypeScript",
+        "badge": "Tipado seguro",
+        "text": "Compatibilidad completa con TypeScript en páginas y componentes para una experiencia de desarrollo segura."
+      },
+      {
+        "title": "Paquete SEO",
+        "badge": "Integrado",
+        "text": "Configuración SEO completa: meta tags, Open Graph, Twitter Cards y datos estructurados JSON-LD."
+      },
+      {
+        "title": "Dos idiomas",
+        "badge": "i18n",
+        "text": "Inglés y español listos desde el primer momento. Añade más idiomas en minutos."
+      },
+      {
+        "title": "Diseño responsive",
+        "badge": "Mobile-First",
+        "text": "Diseño totalmente responsive optimizado para móvil, tablet y escritorio."
+      },
+      {
+        "title": "Tema oscuro",
+        "badge": "Con estilo",
+        "text": "Hermoso tema oscuro con un sistema completo de design tokens listo para personalizar."
+      }
     ],
-    "terms": "Esta plantilla es open source y se proporciona tal cual. Personalízala para tu producto."
+    "terms": "Esta plantilla es de código abierto y se ofrece tal cual. Personalízala para tu producto."
   },
-  "integrations": {
-    "sectionTitle": "Funciona con Tu Stack",
-    "sectionSubtitle": "Despliega en cualquier lugar, integra con cualquier servicio",
-    "methods": ["Vercel", "Netlify", "GitHub Pages", "AWS S3", "Cloudflare Pages"],
-    "stepsTitle": "Cómo Empezar",
-    "steps": [
-      { "step": "1", "title": "Clonar", "text": "Clona el repositorio en tu máquina local con git clone." },
-      { "step": "2", "title": "Instalar", "text": "Ejecuta npm install o pnpm install para configurar todas las dependencias." },
-      { "step": "3", "title": "Configurar", "text": "Actualiza next-i18next.config.js con tus locales y agrega archivos de traducción." },
-      { "step": "4", "title": "Desplegar", "text": "Ejecuta npm run build y despliega en tu proveedor de hosting preferido." }
-    ],
-    "securityTitle": "Rendimiento y Buenas Prácticas",
-    "securityItems": [
-      "Generación estática (SSG) para máximo rendimiento",
-      "Detección automática del idioma del navegador y redirección",
-      "Optimización de fuentes con font-display: swap",
-      "Optimización de imágenes con el componente Next.js Image",
-      "Markup accesible con etiquetas ARIA"
-    ],
-    "faq": [
-      { "q": "¿Puedo usar esto con App Router?", "a": "Esta plantilla usa Pages Router. Puedes migrar a App Router con next-intl para una configuración i18n más moderna." },
-      { "q": "¿Cómo agrego un nuevo idioma?", "a": "Agrega el locale a next-i18next.config.js y crea una nueva carpeta en public/locales/ con tus archivos de traducción." },
-      { "q": "¿Es gratis de usar?", "a": "Sí. AppTemplate tiene licencia MIT. Úsalo libremente en proyectos personales y comerciales." },
-      { "q": "¿Qué plataformas de despliegue son compatibles?", "a": "Cualquier plataforma que soporte archivos estáticos: Vercel, Netlify, GitHub Pages, AWS S3, Cloudflare Pages y más." }
-    ]
+  "payments": {
+    "hero": {
+      "title": "Funciona con tu stack moderno",
+      "text": "Conecta tu proyecto multilingüe de Next.js con las herramientas, plataformas de hosting y flujos de trabajo que tu equipo ya utiliza.",
+      "stats": [
+        { "value": "5+", "label": "Plataformas de hosting compatibles" },
+        { "value": "10 min", "label": "Tiempo medio de configuración" },
+        { "value": "100%", "label": "Listo para despliegue estático" }
+      ]
+    },
+    "article": {
+      "title": "Creado para una integración rápida y un despliegue sencillo",
+      "p1": "Esta plantilla está diseñada para encajar de forma natural en flujos de trabajo frontend modernos, tanto si despliegas proyectos personales como sitios de marketing o páginas empresariales multilingües.",
+      "p2": "Puedes usarla con proveedores de hosting comunes, pipelines de despliegue basados en Git y flujos estándar de localización sin tener que reestructurar tu aplicación desde cero.",
+      "highlight": "Lanza más rápido con una configuración que funciona bien con hosting moderno, archivos de traducción y herramientas frontend escalables.",
+      "list": [
+        "Lista para hosting estático y flujos CI/CD",
+        "Integración sencilla con estructura de contenido basada en locales",
+        "Lo bastante flexible para proyectos personales, startups y clientes",
+        "Organización limpia del proyecto para mantenimiento a largo plazo"
+      ],
+      "p3": "Tanto si estás iniciando una nueva landing page multilingüe como adaptando un sitio web existente, la plantilla mantiene el despliegue y la localización de forma clara y sencilla.",
+      "cta": "Comenzar"
+    },
+    "methods": {
+      "title": "Opciones populares de despliegue",
+      "items": [
+        {
+          "name": "Vercel",
+          "featured": true,
+          "badge": "Recomendado",
+          "details": [
+            { "label": "Setup", "value": "Importación con un clic" },
+            { "label": "Best for", "value": "Proyectos Next.js" },
+            { "label": "Workflow", "value": "Despliegues basados en Git" }
+          ],
+          "cta": "Desplegar con Vercel"
+        },
+        {
+          "name": "Netlify",
+          "featured": false,
+          "badge": "Popular",
+          "details": [
+            { "label": "Setup", "value": "Configuración de build sencilla" },
+            { "label": "Best for", "value": "Sitios web estáticos" },
+            { "label": "Workflow", "value": "Despliegues preview rápidos" }
+          ],
+          "cta": "Usar Netlify"
+        },
+        {
+          "name": "GitHub Pages",
+          "featured": false,
+          "badge": "Gratis",
+          "details": [
+            { "label": "Setup", "value": "Basado en repositorio" },
+            { "label": "Best for", "value": "Documentación y demos" },
+            { "label": "Workflow", "value": "Exportación estática" }
+          ],
+          "cta": "Publicar en GitHub Pages"
+        },
+        {
+          "name": "AWS S3",
+          "featured": false,
+          "badge": "Escalable",
+          "details": [
+            { "label": "Setup", "value": "Despliegue en bucket" },
+            { "label": "Best for", "value": "Infraestructura personalizada" },
+            { "label": "Workflow", "value": "Hosting de activos estáticos" }
+          ],
+          "cta": "Desplegar en AWS"
+        }
+      ]
+    },
+    "process": {
+      "title": "Primeros pasos",
+      "steps": [
+        {
+          "title": "Clona la plantilla",
+          "description": "Copia el proyecto en tu entorno local y prepáralo para tu propio dominio, marca y contenido.",
+          "link": "/register",
+          "cta": "Clonar proyecto"
+        },
+        {
+          "title": "Instala las dependencias",
+          "description": "Ejecuta tu gestor de paquetes preferido para instalar todo lo necesario para el desarrollo, la compilación y la localización.",
+          "link": "/register",
+          "cta": "Instalar ahora"
+        },
+        {
+          "title": "Configura los idiomas",
+          "description": "Añade tus idiomas, actualiza los recursos de traducción y organiza el contenido de cada locale con una estructura escalable.",
+          "link": "/register",
+          "cta": "Configurar i18n"
+        },
+        {
+          "title": "Despliega en cualquier lugar",
+          "description": "Compila el proyecto y publícalo en tu plataforma preferida, desde Vercel y Netlify hasta S3 y servicios de hosting estático.",
+          "link": "/register",
+          "cta": "Desplegar proyecto"
+        }
+      ]
+    },
+    "banner": {
+      "title": "Despliegue flexible, flujo limpio",
+      "text": "Usa la misma estructura de proyecto en desarrollo, staging y producción con una configuración que sigue siendo simple a medida que tu sitio crece."
+    },
+    "articleSecurity": {
+      "title": "Rendimiento y buenas prácticas",
+      "p1": "Un proyecto multilingüe bien estructurado no solo debe ser fácil de desplegar, sino también rápido de cargar, sencillo de mantener y claro para equipos que trabajan en múltiples locales.",
+      "p2": "Esta configuración admite buenas prácticas frontend útiles que mejoran la experiencia del usuario mientras mantienen la base de código organizada para el desarrollo futuro.",
+      "highlight": "Un buen rendimiento comienza con una estructura limpia, activos eficientes y flujos de despliegue predecibles.",
+      "p3": "Al combinar generación estática, activos optimizados y marcado accesible, puedes ofrecer una experiencia profesional sin añadir complejidad innecesaria.",
+      "list": [
+        "Generación estática para una entrega rápida de páginas",
+        "Organización clara por locale para un mantenimiento más sencillo",
+        "Activos optimizados para un mejor rendimiento de carga",
+        "Estructura accesible para una mejor experiencia de usuario",
+        "Flexibilidad de despliegue en múltiples proveedores"
+      ],
+      "cta": "Explorar más"
+    },
+    "faq": {
+      "title": "Preguntas frecuentes",
+      "items": [
+        {
+          "question": "¿Puedo desplegar este proyecto en diferentes plataformas de hosting?",
+          "answer": "Sí. La plantilla es adecuada para servicios de hosting modernos como Vercel, Netlify, GitHub Pages, AWS S3 y otras plataformas compatibles con sitios estáticos."
+        },
+        {
+          "question": "¿Es adecuada para sitios web multilingües?",
+          "answer": "Sí. La estructura está diseñada para contenido basado en locales y archivos de traducción, lo que la hace práctica para landing pages y sitios web multilingües."
+        },
+        {
+          "question": "¿Necesito reconstruir el proyecto en cada actualización?",
+          "answer": "En la mayoría de los casos, sí. Después de cambios en el contenido o en las traducciones, normalmente vuelves a compilar y desplegar para publicar la versión estática más reciente."
+        },
+        {
+          "question": "¿Puedo usarlo para proyectos de clientes y empresas?",
+          "answer": "Por supuesto. La configuración es lo bastante limpia para sitios de portafolio, páginas de startups, showcases de producto y sitios web empresariales multilingües."
+        }
+      ]
+    }
   },
+
   "getStarted": {
-    "articleTitle": "Cómo Usar AppTemplate",
-    "intro": "AppTemplate está diseñado para llevarte de cero a un sitio multilingüe listo para producción lo más rápido posible.",
-    "sections": [
-      { "title": "Estructura del Proyecto", "text": "Las páginas están en src/pages/[locale]/ — una carpeta por ruta, servida automáticamente para cada idioma. Las traducciones están en public/locales/[lang]/common.json." },
-      { "title": "Agregar Traducciones", "text": "Edita los archivos JSON en public/locales/ para agregar tu propio contenido. La plantilla usa un único namespace common para simplificar." },
-      { "title": "Personalizar el Tema", "text": "Edita src/styles/theme.js para actualizar colores, fuentes, espaciado y breakpoints. Todos los componentes leen del tema via ThemeProvider." },
-      { "title": "Configuración SEO", "text": "Actualiza las claves seo en tus archivos de locale y reemplaza YOUR_DOMAIN con tu dominio real en los archivos de página." }
+    "eyebrow": "Destacado",
+    "title": "Todo lo que necesitas para lanzar más rápido",
+    "subtitle": "AppTemplate ofrece a los equipos modernos un punto de partida claro para landing pages multilingües, sitios de marketing preparados para SEO y flujos de contenido global escalables.",
+    "badges": [
+      "Listo para SEO",
+      "Lanzamiento rápido",
+      "Escalable 24/7",
+      "Optimizado para móvil"
     ],
-    "faq": [
-      { "q": "¿Cómo cambio el idioma predeterminado?", "a": "Actualiza defaultLocale en next-i18next.config.js. La app redirigirá a los usuarios a su idioma del navegador automáticamente." },
-      { "q": "¿Puedo eliminar un idioma?", "a": "Sí. Elimina el locale del array locales en next-i18next.config.js y borra la carpeta correspondiente en public/locales/." },
-      { "q": "¿Cómo personalizo el tema de color?", "a": "Edita src/styles/theme.js. El objeto colors contiene todos los design tokens usados en toda la plantilla." },
-      { "q": "¿Soporta SSR?", "a": "La configuración predeterminada usa exportación estática (SSG). Elimina output: 'export' de next.config.js para habilitar SSR." },
-      { "q": "¿Cómo agrego nuevas páginas?", "a": "Crea un nuevo archivo en src/pages/[locale]/ y agrega las traducciones correspondientes en tus archivos JSON de locale." }
-    ]
+    "rows": [
+      {
+        "label": "Producto",
+        "value": "AppTemplate"
+      },
+      {
+        "label": "Framework",
+        "value": "Next.js 14"
+      },
+      {
+        "label": "Localización",
+        "value": "Estructura i18n integrada para páginas multilingües"
+      },
+      {
+        "label": "Ideal para",
+        "value": "Sitios de marketing, landing pages, lanzamientos SaaS y páginas globales de marca"
+      },
+      {
+        "label": "Configuración SEO",
+        "value": "Optimizado para visibilidad, control de metadatos y estructura de contenido limpia"
+      },
+      {
+        "label": "Despliegue",
+        "value": "Listo para Vercel, Netlify, GitHub Pages, AWS S3 y plataformas de hosting similares"
+      },
+      {
+        "label": "Flujo del proyecto",
+        "value": "Configuración rápida, secciones reutilizables y gestión de contenido escalable"
+      },
+      {
+        "label": "Repositorio",
+        "value": "Ver en GitHub",
+        "href": "https://github.com/kekyra007-ux/multilingual-nextjs-template"
+      }
+    ],
+    "primaryCta": "Comenzar",
+    "primaryHref": "/register",
+    "secondaryCta": "Explorar funciones",
+    "secondaryHref": "/features",
+    "accordion": {
+      "eyebrow": "Inicio rápido",
+      "title": "Empieza tu proyecto en unos pocos pasos claros",
+      "subtitle": "Sigue un flujo simple para configurar tu sitio multilingüe, preparar el contenido y publicar más rápido con una base lista para producción.",
+      "intro": "Puedes pasar de la configuración al lanzamiento rápidamente siguiendo una pequeña secuencia de pasos prácticos. Cada paso está diseñado para mantener el proyecto organizado y fácil de ampliar a medida que crece tu contenido.",
+      "items": [
+        {
+          "step": "1",
+          "title": "Crea la base de tu proyecto",
+          "text": "Empieza clonando el repositorio y abriendo el proyecto localmente. Esto te ofrece toda la estructura inicial, secciones reutilizables y la configuración multilingüe por defecto en un solo lugar."
+        },
+        {
+          "step": "2",
+          "title": "Instala las dependencias",
+          "text": "Ejecuta tu gestor de paquetes preferido para instalar todas las dependencias necesarias. Una vez instaladas, podrás iniciar el entorno de desarrollo y comenzar a personalizar el sitio de inmediato."
+        },
+        {
+          "step": "3",
+          "title": "Configura idiomas y contenido",
+          "text": "Añade los locales que necesite tu proyecto, conecta los archivos de traducción y actualiza los textos de cada mercado. Este paso ayuda a mantener tu estructura multilingüe escalable desde el inicio."
+        },
+        {
+          "step": "4",
+          "title": "Personaliza secciones y branding",
+          "text": "Sustituye el contenido inicial por tus propios mensajes, visuales y estilos de marca. Como el layout ya está estructurado para páginas de marketing, editar contenido sigue siendo rápido y predecible."
+        },
+        {
+          "step": "5",
+          "title": "Compila y despliega",
+          "text": "Cuando todo esté listo, compila el proyecto y desplíegalo en tu plataforma de hosting preferida. La plantilla está preparada para flujos modernos, lo que facilita tanto el lanzamiento como las futuras actualizaciones."
+        }
+      ],
+      "primaryCta": "Lanzar ahora",
+      "primaryHref": "/register",
+      "secondaryCta": "Abrir FAQ",
+      "secondaryHref": "/faq"
+    }
   },
+
   "footer": {
     "aboutTitle": "AppTemplate",
     "aboutText": "Una plantilla Next.js moderna y multilingüe. Open source, licencia MIT, libre de usar y personalizar.",

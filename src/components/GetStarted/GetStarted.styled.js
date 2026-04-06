@@ -1,452 +1,440 @@
 import styled from "styled-components";
+import { colors, gradients } from "@/styles/theme";
 
-export const SlotsWrapper = styled.div`
-  width: 100%;
+export const SectionWrapper = styled.section`
+  position: relative;
+  overflow: hidden;
+  padding: 96px 0;
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(245, 200, 76, 0.1),
+      transparent 26%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(200, 75, 255, 0.16),
+      transparent 32%
+    ),
+    ${gradients.dark};
 
-  padding: 60px 0;
+  @media (max-width: 992px) {
+    padding: 80px 0;
+  }
+
+  @media (max-width: 576px) {
+    padding: 64px 0;
+  }
 `;
 
-export const SlotsContainer = styled.div`
-  max-width: 1200px;
+export const GridPattern = styled.div`
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.12;
+  background-image:
+    linear-gradient(rgba(246, 240, 255, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(246, 240, 255, 0.07) 1px, transparent 1px);
+  background-size: 38px 38px;
+`;
+
+export const BackgroundGlowTop = styled.div`
+  position: absolute;
+  top: -140px;
+  left: -120px;
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(245, 200, 76, 0.18) 0%,
+    transparent 72%
+  );
+  filter: blur(16px);
+  pointer-events: none;
+`;
+
+export const BackgroundGlowBottom = styled.div`
+  position: absolute;
+  right: -140px;
+  bottom: -140px;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(200, 75, 255, 0.18) 0%,
+    transparent 72%
+  );
+  filter: blur(22px);
+  pointer-events: none;
+`;
+
+export const Container = styled.div`
+  position: relative;
+  z-index: 1;
+  width: min(100%, 1180px);
   margin: 0 auto;
   padding: 0 20px;
-`;
-export const SectionHeader = styled.div`
-  text-align: center;
-  margin: 34px auto 18px;
-  max-width: 900px;
-  padding: 0 10px;
+
+  @media (max-width: 576px) {
+    padding: 0 16px;
+  }
 `;
 
-export const SectionTitle = styled.h2`
-  margin: 0;
-  font-size: 26px;
-  line-height: 1.15;
-  letter-spacing: -0.3px;
-  color: ${({ theme }) => theme.colors?.lightText};
-  background: ${({ theme }) => theme.gradients?.title};
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+export const Badge = styled.div`
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  margin-bottom: 22px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  border: 1px solid rgba(245, 200, 76, 0.28);
+  background: rgba(246, 240, 255, 0.03);
+  color: ${colors.lightText};
+  font-size: 0.86rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
-
-  @media (max-width: 520px) {
-    font-size: 22px;
-  }
-
-  @media (max-width: 360px) {
-    font-size: 20px;
-  }
-`;
-export const LongArticleSection = styled.section`
-  padding: 44px 0 10px;
+  box-shadow: inset 0 1px 0 rgba(246, 240, 255, 0.04);
 `;
 
-export const LongArticleInner = styled.div`
-  background: ${({ theme }) => theme.gradients?.card};
-  border: 1px solid ${({ theme }) => theme.colors?.muted};
-  border-radius: 22px;
-  box-shadow: 0 14px 40px ${({ theme }) => theme.colors?.overlay};
-  overflow: hidden;
-`;
-
-export const LongArticleHeader = styled.div`
-  padding: 26px 26px 18px;
-  background: ${({ theme }) => theme.gradients?.overlay};
-  border-bottom: 1px solid ${({ theme }) => theme.colors?.muted};
-
-  @media (max-width: 520px) {
-    padding: 18px 16px 14px;
-  }
-`;
-
-export const LongArticleTitle = styled.h2`
-  margin: 0 0 8px;
-  font-size: 32px;
-  text-transform: uppercase;
-
-  line-height: 1.15;
-  letter-spacing: -0.3px;
-  color: ${({ theme }) => theme.colors?.lightText};
-  background: ${({ theme }) => theme.gradients?.title};
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-
-  @media (max-width: 520px) {
-    font-size: 22px;
-  }
-
-  @media (max-width: 360px) {
-    font-size: 20px;
-  }
-`;
-
-export const LongArticleSubtitle = styled.p`
-  margin: 0;
+export const Header = styled.div`
   max-width: 980px;
-  font-size: 14px;
-  line-height: 1.7;
-  color: ${({ theme }) => theme.colors?.textDim};
+  margin-bottom: 34px;
+`;
 
-  @media (max-width: 360px) {
-    font-size: 13px;
-    line-height: 1.65;
+export const TitleWrap = styled.div`
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  margin-bottom: 18px;
+
+  @media (max-width: 576px) {
+    gap: 14px;
   }
 `;
 
-export const LongArticleGrid = styled.div`
-  display: grid;
-  grid-template-columns: 320px 1fr;
-  gap: 0;
-  min-height: 420px;
+export const TitleAccent = styled.span`
+  flex: 0 0 auto;
+  width: 8px;
+  height: 84px;
+  border-radius: 999px;
+  background: ${gradients.jackpot};
+  box-shadow: 0 0 18px rgba(245, 200, 76, 0.35);
 
-  @media (max-width: 980px) {
+  @media (max-width: 768px) {
+    height: 70px;
+  }
+
+  @media (max-width: 576px) {
+    width: 6px;
+    height: 58px;
+  }
+`;
+
+export const Title = styled.h2`
+  margin: 0;
+  color: ${colors.lightText};
+  font-size: clamp(2rem, 4.6vw, 4rem);
+  line-height: 1.03;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+`;
+
+export const Subtitle = styled.p`
+  margin: 0;
+  color: ${colors.textDim};
+  font-size: 1.03rem;
+  line-height: 1.9;
+  max-width: 980px;
+`;
+
+const panelBase = `
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+  border-radius: 30px;
+  border: 1px solid rgba(245, 200, 76, 0.28);
+  background:
+    linear-gradient(180deg, rgba(246, 240, 255, 0.03) 0%, rgba(246, 240, 255, 0.01) 100%),
+    ${gradients.card};
+  box-shadow:
+    0 18px 42px rgba(8, 3, 18, 0.34),
+    inset 0 1px 0 rgba(246, 240, 255, 0.04);
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(180deg, rgba(245, 200, 76, 0.06) 0%, transparent 36%);
+  }
+
+  @media (max-width: 768px) {
+    padding: 16px;
+    border-radius: 24px;
+  }
+`;
+
+export const Panel = styled.div`
+  ${panelBase}
+  margin-bottom: 34px;
+`;
+
+export const BadgesRow = styled.div`
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: 18px;
+
+  @media (max-width: 992px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @media (max-width: 576px) {
     grid-template-columns: 1fr;
   }
 `;
 
-export const LongArticleAside = styled.aside`
-  padding: 18px;
-  border-right: 1px solid ${({ theme }) => theme.colors?.muted};
-  background: ${({ theme }) => theme.colors?.backgroundSecondary};
-  position: sticky;
-  top: 18px;
-  align-self: start;
-
-  @media (max-width: 980px) {
-    position: relative;
-    top: auto;
-    border-right: none;
-    border-bottom: 1px solid ${({ theme }) => theme.colors?.muted};
-  }
-
-  @media (max-width: 520px) {
-    padding: 14px;
-  }
-`;
-
-export const LongArticleAsideTitle = styled.div`
-  margin-bottom: 10px;
-  font-weight: 800;
-  letter-spacing: 0.2px;
-  color: ${({ theme }) => theme.colors?.lightText};
-`;
-
-export const LongArticleTOC = styled.div`
-  display: grid;
-  gap: 10px;
-`;
-
-export const LongArticleTOCItem = styled.a`
+export const InfoBadge = styled.div`
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 10px 12px;
-  border-radius: 14px;
-  text-decoration: none;
-  color: ${({ theme }) => theme.colors?.text};
-  border: 1px solid ${({ theme }) => theme.colors?.muted};
-  background: ${({ theme }) => theme.gradients?.card};
-  transition:
-    transform 0.15s ease,
-    border-color 0.15s ease;
-
-  span {
-    width: 22px;
-    display: inline-flex;
-    justify-content: center;
-  }
-
-  &:hover {
-    transform: translateY(-1px);
-    border-color: ${({ theme }) => theme.colors?.borderPink};
-  }
-
-  @media (max-width: 360px) {
-    padding: 9px 10px;
-    border-radius: 12px;
-    font-size: 13px;
-  }
-`;
-
-export const LongArticleMiniList = styled.div`
-  margin-top: 14px;
-  display: grid;
-  gap: 10px;
-`;
-
-export const LongArticleMiniItem = styled.div`
-  display: flex;
-  gap: 10px;
-  align-items: flex-start;
-  padding: 10px 12px;
-  border-radius: 14px;
-  border: 1px solid ${({ theme }) => theme.colors?.muted};
-  color: ${({ theme }) => theme.colors?.textDim};
-
-  span {
-    width: 22px;
-    display: inline-flex;
-    justify-content: center;
-  }
-
-  @media (max-width: 360px) {
-    padding: 9px 10px;
-    border-radius: 12px;
-    font-size: 13px;
-  }
-`;
-
-export const LongArticleBody = styled.div`
-  padding: 22px 26px 26px;
-
-  @media (max-width: 520px) {
-    padding: 16px;
-  }
-`;
-
-export const LongArticleBlock = styled.section`
-  padding: 18px 0;
-  border-bottom: 1px solid ${({ theme }) => theme.colors?.muted};
-
-  &:last-child {
-    border-bottom: none;
-  }
-`;
-
-export const LongArticleH3 = styled.h3`
-  margin: 0 0 10px;
-  font-size: 18px;
-  line-height: 1.25;
-  color: ${({ theme }) => theme.colors?.lightText};
-
-  @media (max-width: 360px) {
-    font-size: 16px;
-  }
-`;
-
-export const LongArticleP = styled.p`
-  margin: 0 0 10px;
-  font-size: 14px;
-  line-height: 1.8;
-  color: ${({ theme }) => theme.colors?.text};
-
-  @media (max-width: 360px) {
-    font-size: 13px;
-    line-height: 1.75;
-  }
-`;
-
-export const LongArticleList = styled.div`
-  margin-top: 12px;
-  display: grid;
-  gap: 10px;
-`;
-
-export const LongArticleLi = styled.div`
-  display: grid;
-  grid-template-columns: 22px 1fr;
-  gap: 10px;
-  align-items: start;
-  padding: 12px 12px;
-  border-radius: 16px;
-  border: 1px solid ${({ theme }) => theme.colors?.muted};
-  background: ${({ theme }) => theme.gradients?.card};
-
-  span {
-    width: 22px;
-    display: inline-flex;
-    justify-content: center;
-    margin-top: 2px;
-  }
-
-  @media (max-width: 360px) {
-    padding: 10px;
-    border-radius: 14px;
-  }
-`;
-
-export const LongArticleLiTitle = styled.div`
+  justify-content: center;
+  min-height: 54px;
+  padding: 12px 16px;
+  text-align: center;
+  border-radius: 999px;
+  border: 1px solid rgba(245, 200, 76, 0.32);
+  background: rgba(246, 240, 255, 0.04);
+  color: ${colors.lightText};
+  font-size: 0.95rem;
   font-weight: 800;
-  color: ${({ theme }) => theme.colors?.lightText};
-  margin-bottom: 2px;
+  letter-spacing: 0.03em;
+  box-shadow: inset 0 1px 0 rgba(246, 240, 255, 0.04);
 `;
 
-export const LongArticleLiText = styled.div`
-  color: ${({ theme }) => theme.colors?.textDim};
-  line-height: 1.65;
-`;
-
-export const LongArticleCallouts = styled.div`
-  margin-top: 18px;
-  display: grid;
-  gap: 12px;
-`;
-
-export const LongArticleCallout = styled.div`
-  padding: 14px 14px;
-  border-radius: 18px;
-  border: 1px solid ${({ theme }) => theme.colors?.borderPink};
-  background: ${({ theme }) => theme.gradients?.overlay};
-  box-shadow: 0 10px 30px ${({ theme }) => theme.colors?.overlay};
-
-  @media (max-width: 360px) {
-    border-radius: 16px;
-    padding: 12px;
-  }
-`;
-
-export const LongArticleCalloutTop = styled.div`
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  color: ${({ theme }) => theme.colors?.lightText};
-
-  span {
-    width: 22px;
-    display: inline-flex;
-    justify-content: center;
-  }
-
-  strong {
-    font-weight: 900;
-    letter-spacing: 0.2px;
-  }
-`;
-
-export const LongArticleCalloutText = styled.p`
-  margin: 8px 0 0;
-  color: ${({ theme }) => theme.colors?.text};
-  line-height: 1.75;
-`;
-
-export const LongArticleCTA = styled.div`
-  margin-top: 18px;
-  padding: 16px;
-  border-radius: 18px;
-  border: 1px solid ${({ theme }) => theme.colors?.muted};
-  background: ${({ theme }) => theme.colors?.backgroundSecondary};
-`;
-
-export const LongArticleCTATitle = styled.div`
-  font-weight: 900;
-  color: ${({ theme }) => theme.colors?.lightText};
-  margin-bottom: 6px;
-`;
-
-export const LongArticleCTAText = styled.div`
-  color: ${({ theme }) => theme.colors?.textDim};
-  line-height: 1.7;
-  margin-bottom: 12px;
-`;
-
-export const FAQSection = styled.section`
-  margin-bottom: 80px;
-
-  @media (max-width: 420px) {
-    margin-bottom: 60px;
-    padding: 0 12px;
-  }
-`;
-
-export const FAQGrid = styled.div`
-  max-width: 900px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-
-  @media (max-width: 400px) {
-    gap: 12px;
-  }
-`;
-
-export const FAQItem = styled.div`
-  background: ${({ theme }) =>
-    theme.gradients?.card ||
-    "linear-gradient(135deg, rgba(64, 40, 20, 0.9) 0%, rgba(26, 15, 8, 0.95) 100%)"};
-  border: 1px solid ${({ theme }) => theme.colors?.borderTeal || "#5C402C"};
-  border-radius: 12px;
+export const Table = styled.div`
+  position: relative;
+  z-index: 1;
   overflow: hidden;
-  cursor: pointer;
-  transition: all 0.3s ease;
-
-  &:hover {
-    border-color: ${({ theme }) => theme.colors?.primary || "#D6A24E"};
-  }
-
-  @media (max-width: 360px) {
-    border-radius: 10px;
-  }
+  border-radius: 22px;
+  border: 1px solid rgba(246, 240, 255, 0.07);
+  background: rgba(22, 6, 43, 0.3);
 `;
 
-export const FAQQuestion = styled.div`
-  padding: 24px;
-  font-size: 18px;
-  font-weight: 600;
-  color: ${({ theme }) => theme.colors?.light || "#FFF8E1"};
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 12px;
+export const TableRow = styled.div`
+  display: grid;
+  grid-template-columns: 0.42fr 0.58fr;
 
-  span {
-    font-size: 26px;
-    color: ${({ theme }) => theme.colors?.light || "#D6A24E"};
-    transition: transform 0.3s ease;
-    transform: ${({ $expanded }) =>
-      $expanded ? "rotate(180deg)" : "rotate(0)"};
-    flex-shrink: 0;
+  &:not(:last-child) {
+    border-bottom: 1px solid rgba(246, 240, 255, 0.06);
   }
 
   @media (max-width: 768px) {
-    font-size: 16px;
-    padding: 20px;
+    grid-template-columns: 1fr;
+  }
+`;
+
+export const LabelCell = styled.div`
+  padding: 22px 20px;
+  color: ${colors.lightText};
+  font-size: 1rem;
+  font-weight: 800;
+  border-right: 1px solid rgba(245, 200, 76, 0.26);
+  background: linear-gradient(
+    180deg,
+    rgba(246, 240, 255, 0.04) 0%,
+    rgba(246, 240, 255, 0.02) 100%
+  );
+
+  @media (max-width: 768px) {
+    padding: 16px 16px 8px;
+    border-right: none;
+    border-bottom: 1px solid rgba(245, 200, 76, 0.16);
+  }
+`;
+
+export const ValueCell = styled.div`
+  padding: 22px 20px;
+  color: ${colors.textDim};
+  font-size: 1rem;
+  line-height: 1.7;
+  background: linear-gradient(
+    180deg,
+    rgba(56, 214, 255, 0.03) 0%,
+    rgba(246, 240, 255, 0.01) 100%
+  );
+
+  @media (max-width: 768px) {
+    padding: 12px 16px 16px;
+  }
+`;
+
+export const ValueLink = styled.a`
+  color: ${colors.lightText};
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: ${colors.primary};
+  }
+`;
+
+export const Actions = styled.div`
+  position: relative;
+  z-index: 1;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 18px;
+
+  & > * {
+    min-width: 150px;
   }
 
-  @media (max-width: 420px) {
-    font-size: 15px;
-    padding: 18px;
-  }
+  @media (max-width: 576px) {
+    flex-direction: column;
 
-  @media (max-width: 360px) {
-    font-size: 14px;
+    & > * {
+      width: 100%;
+    }
+  }
+`;
+
+export const AccordionSection = styled.div`
+  margin-top: 100px;
+`;
+
+export const AccordionBadge = styled(Badge)`
+  margin-bottom: 22px;
+`;
+
+export const AccordionHeader = styled(Header)`
+  margin-bottom: 28px;
+`;
+
+export const AccordionPanel = styled.div`
+  ${panelBase}
+  padding: 28px;
+
+  @media (max-width: 768px) {
+    padding: 18px 16px;
+  }
+`;
+
+export const AccordionIntro = styled.p`
+  position: relative;
+  z-index: 1;
+  margin: 0 0 20px;
+  color: ${colors.textDim};
+  font-size: 1.02rem;
+  line-height: 1.8;
+`;
+
+export const AccordionList = styled.div`
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 14px;
+`;
+
+export const AccordionItem = styled.div`
+  border-radius: 18px;
+  border: 1px solid
+    ${({ $open }) =>
+      $open ? "rgba(245, 200, 76, 0.34)" : "rgba(245, 200, 76, 0.22)"};
+  background: ${({ $open }) =>
+    $open
+      ? "linear-gradient(180deg, rgba(245, 200, 76, 0.08) 0%, rgba(246, 240, 255, 0.02) 100%)"
+      : "linear-gradient(180deg, rgba(246, 240, 255, 0.03) 0%, rgba(246, 240, 255, 0.01) 100%)"};
+  box-shadow: ${({ $open }) =>
+    $open
+      ? "0 12px 28px rgba(8, 3, 18, 0.24), inset 0 1px 0 rgba(246, 240, 255, 0.04)"
+      : "inset 0 1px 0 rgba(246, 240, 255, 0.03)"};
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+`;
+
+export const AccordionTrigger = styled.button`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 20px;
+  border: none;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  text-align: left;
+
+  @media (max-width: 576px) {
+    gap: 12px;
     padding: 16px;
   }
 `;
 
-export const FAQAnswer = styled.div`
-  padding: 0 24px 24px;
-  font-size: 16px;
-  color: ${({ theme }) => theme.colors?.light || "#C0A98C"};
-  line-height: 1.6;
-  animation: fadeIn 0.3s ease;
+export const StepNumber = styled.span`
+  flex: 0 0 auto;
+  width: 34px;
+  height: 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: ${gradients.jackpot};
+  color: ${colors.dark};
+  font-size: 0.95rem;
+  font-weight: 900;
+  box-shadow: 0 0 14px rgba(245, 200, 76, 0.28);
+`;
 
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(-8px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
+export const StepTitle = styled.span`
+  flex: 1 1 auto;
+  color: ${colors.lightText};
+  font-size: 1.04rem;
+  line-height: 1.4;
+  font-weight: 800;
+`;
 
-  @media (max-width: 768px) {
-    font-size: 14px;
-    padding: 0 20px 20px;
-  }
+export const StepIcon = styled.span`
+  flex: 0 0 auto;
+  width: 30px;
+  height: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid rgba(245, 200, 76, 0.3);
+  color: ${colors.primary};
+  font-size: 1rem;
+  font-weight: 700;
+  transform: rotate(${({ $open }) => ($open ? "45deg" : "0deg")});
+  transition: transform 0.2s ease;
+`;
 
-  @media (max-width: 420px) {
-    font-size: 13px;
-    padding: 0 18px 18px;
-  }
+export const AccordionContent = styled.div`
+  padding: 0 20px 18px 70px;
 
-  @media (max-width: 360px) {
-    font-size: 12px;
-    line-height: 1.5;
-    padding: 0 16px 16px;
+  @media (max-width: 576px) {
+    padding: 0 16px 16px 62px;
   }
+`;
+
+export const AccordionText = styled.p`
+  margin: 0;
+  color: ${colors.textDim};
+  line-height: 1.8;
+  font-size: 0.98rem;
+`;
+
+export const AccordionActions = styled(Actions)`
+  justify-content: center;
+  margin-top: 22px;
 `;

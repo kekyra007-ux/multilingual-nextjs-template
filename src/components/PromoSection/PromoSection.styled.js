@@ -1,12 +1,12 @@
 import styled, { keyframes } from "styled-components";
 
-export const BonusesWrapper = styled.section`
+export const PromoSectionWrapper = styled.section`
   padding: ${({ theme }) => theme.spacing["4xl"]} 0;
   position: relative;
   overflow: hidden;
 `;
 
-export const BonusesContainer = styled.div`
+export const PromoSectionContainer = styled.div`
   max-width: ${({ theme }) => theme.container.maxWidth};
   margin: 0 auto;
   padding: 0 ${({ theme }) => theme.container.padding};
@@ -283,163 +283,128 @@ export const BonusGrid = styled.div`
 `;
 
 export const BonusCard = styled.div`
-  background: ${({ $gradient }) => $gradient};
-
-  border: 2px solid rgba(255, 255, 255, 0.15);
-  border-radius: ${({ theme }) => theme.radii.xl};
-  padding: ${({ theme }) => theme.spacing.xl};
-  text-align: center;
-  transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: ${({ theme }) => theme.spacing.xl};
+  border-radius: 28px;
+  background:
+    radial-gradient(
+      circle at top,
+      rgba(255, 255, 255, 0.04) 0%,
+      transparent 32%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.02) 0%,
+      rgba(255, 255, 255, 0.01) 100%
+    ),
+    linear-gradient(180deg, #221a30 0%, #171220 58%, #100c16 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   box-shadow:
-    0 0 20px rgba(0, 0, 0, 0.35),
-    inset 0 0 25px rgba(0, 0, 0, 0.2);
+    0 18px 40px rgba(0, 0, 0, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  transition:
+    transform 0.28s ease,
+    border-color 0.28s ease,
+    box-shadow 0.28s ease,
+    background 0.28s ease;
 
-  &:hover {
-    transform: translateY(-8px);
-    box-shadow:
-      0 0 28px rgba(255, 205, 80, 0.45),
-      0 0 14px rgba(255, 255, 255, 0.25);
-    border-color: ${({ theme }) => theme.colors.borderPink};
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    border-radius: inherit;
+    background: linear-gradient(
+      180deg,
+      rgba(214, 178, 94, 0.06) 0%,
+      transparent 22%
+    );
+    opacity: 0.9;
   }
 
-  @media (min-width: 768px) {
-    padding: ${({ theme }) => theme.spacing.xl};
+  &:hover {
+    transform: translateY(-6px);
+    border-color: rgba(214, 178, 94, 0.2);
+    box-shadow:
+      0 24px 48px rgba(0, 0, 0, 0.34),
+      0 0 0 1px rgba(214, 178, 94, 0.06),
+      inset 0 1px 0 rgba(255, 255, 255, 0.05);
   }
 
   @media (max-width: 480px) {
     padding: ${({ theme }) => theme.spacing.lg};
+    border-radius: 22px;
   }
 `;
 
 export const BonusBadge = styled.span`
   position: absolute;
-  top: 10px;
-  right: ${({ theme }) => theme.spacing.md};
-  background: ${({ theme }) => theme.gradients.primary};
-  color: ${({ theme }) => theme.colors.light};
-  padding: 8px 10px;
-  border-radius: ${({ theme }) => theme.radii.full};
-  font-size: 12px;
+  top: 16px;
+  right: 16px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 34px;
+  padding: 0 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(214, 178, 94, 0.18);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 11px;
   font-weight: ${({ theme }) => theme.font.weight.bold};
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-`;
-
-export const BonusIcon = styled.div`
-  font-size: 60px;
-  margin-bottom: ${({ theme }) => theme.spacing.lg};
+  backdrop-filter: blur(8px);
 `;
 
 export const BonusTitle = styled.h4`
+  position: relative;
+  z-index: 1;
+  margin-top: 56px;
+  margin-bottom: 12px;
   font-family: ${({ theme }) => theme.font.family.heading};
-  font-size: 18px;
-  margin-top: ${({ theme }) => theme.spacing.lg};
-
+  color: #ffffff;
+  font-size: 28px;
+  line-height: 1.12;
   font-weight: ${({ theme }) => theme.font.weight.bold};
-  color: ${({ theme }) => theme.colors.dark};
-  margin-bottom: ${({ theme }) => theme.spacing.sm};
-  @media (max-width: 500px) {
-    font-size: 16px;
-  }
-  @media (max-width: 360px) {
-    font-size: 14px;
-  }
-`;
+  letter-spacing: -0.03em;
+  text-wrap: balance;
 
-export const BonusAmount = styled.div`
-  font-size: 24px;
-  font-weight: 900;
-  text-transform: uppercase;
-  font-family: ${({ theme }) => theme.font.family.heading};
-
-  letter-spacing: 0.5px;
-  color: ${({ theme }) => theme.colors.secondary};
-  text-shadow:
-    -1px -1px 0 ${({ theme }) => theme.colors.light},
-    1px -1px 0 ${({ theme }) => theme.colors.light},
-    -1px 1px 0 ${({ theme }) => theme.colors.light},
-    1px 1px 0 ${({ theme }) => theme.colors.light},
-    0 4px 6px rgba(49, 42, 36, 0.5),
-    0 10px 20px rgba(42, 38, 38, 0.41);
-  margin-bottom: ${({ theme }) => theme.spacing.md};
+  @media (max-width: 768px) {
+    font-size: 24px;
+  }
 
   @media (max-width: 500px) {
     font-size: 21px;
   }
+
   @media (max-width: 360px) {
-    font-size: 16px;
+    font-size: 18px;
   }
 `;
 
 export const BonusDescription = styled.p`
-  font-size: ${({ theme }) => theme.font.size.sm};
-  color: #111;
-  margin-bottom: ${({ theme }) => theme.spacing.lg};
-  line-height: 1.5;
-`;
+  position: relative;
+  z-index: 1;
+  margin: 0 0 ${({ theme }) => theme.spacing.xl};
+  max-width: 30ch;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 17px;
+  line-height: 1.7;
+  font-weight: 400;
 
-export const BonusList = styled.ul`
-  list-style: none;
-  text-align: left;
-  margin-bottom: ${({ theme }) => theme.spacing.xl};
-`;
-
-export const BonusListItem = styled.li`
-  font-size: ${({ theme }) => theme.font.size.sm};
-  color: ${({ theme }) => theme.colors.lightText};
-  font-weight: 700;
-  margin-bottom: 10px;
-
-  padding: 10px 15px;
-  display: flex;
-  align-items: center;
-  gap: ${({ theme }) => theme.spacing.sm};
-
-  background: linear-gradient(
-    135deg,
-    rgba(255, 90, 25, 0.22) 0%,
-    rgba(255, 174, 11, 0.22) 45%,
-    rgba(74, 8, 3, 0.35) 100%
-  );
-  border-radius: 12px;
-  border: 1px solid rgba(255, 203, 143, 0.22);
-
-  box-shadow:
-    inset 0 1px 2px rgba(255, 255, 255, 0.12),
-    0 6px 14px rgba(0, 0, 0, 0.45);
-
-  backdrop-filter: blur(6px);
-
-  &::before {
-    content: "✔";
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 18px;
-    height: 18px;
-    flex-shrink: 0;
-
-    color: ${({ theme }) => theme.colors.dark};
-    font-size: 12px;
-    font-weight: ${({ theme }) => theme.font.weight.bold};
-
-    background: ${({ theme }) => theme.gradients.primary};
-    border-radius: 50%;
-    box-shadow: 0 0 8px ${({ theme }) => theme.colors.glow};
-  }
-
-  &:hover {
-    transform: translateY(-1px);
-  }
-
-  @media (max-width: 360px) {
-    font-size: 12px;
-    padding: ${({ theme }) => theme.spacing.xs}
-      ${({ theme }) => theme.spacing.sm};
+  @media (max-width: 768px) {
+    font-size: 15px;
   }
 `;
+
 export const BonusButton = styled.button`
   width: 100%;
   max-width: 100%;
@@ -468,7 +433,6 @@ export const BonusButton = styled.button`
   cursor: pointer;
   transition: all 0.25s ease;
 
-  /* 🔥 Больше НИКОГДА не ломается */
   white-space: normal;
   word-break: break-word;
   overflow-wrap: break-word;
@@ -505,242 +469,7 @@ export const BonusButton = styled.button`
     padding: 12px 16px;
     font-size: 0.85rem;
 
-    /* 📌 предотвращает странные переносы */
     max-width: 100%;
-  }
-`;
-
-export const InfoSection = styled.section`
-  width: 100%;
-  padding: 60px 0;
-  margin-bottom: ${({ theme }) => theme.spacing["4xl"]};
-
-  border-top: 1px solid ${({ theme }) => theme.colors.line};
-  border-bottom: 1px solid ${({ theme }) => theme.colors.muted};
-
-  @media (max-width: 768px) {
-    padding: 40px 0;
-  }
-`;
-
-export const InfoArticle = styled.div`
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 22px;
-
-  display: flex;
-  flex-direction: column;
-  gap: 42px;
-
-  @media (max-width: 480px) {
-    gap: 32px;
-  }
-`;
-
-export const ArticleBlock = styled.div`
-  padding-left: 14px;
-  border-left: 4px solid ${({ theme }) => theme.colors.accent};
-  background: ${({ theme }) => theme.gradients.background};
-  border-radius: 6px;
-  padding: 18px 20px;
-
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
-  backdrop-filter: blur(4px);
-
-  @media (max-width: 768px) {
-    padding: 16px 16px;
-  }
-
-  @media (max-width: 420px) {
-    padding: 14px 14px;
-  }
-`;
-
-export const ArticleTitle = styled.h3`
-  font-size: 22px;
-  font-weight: 800;
-  margin-bottom: 10px;
-  background: ${({ theme }) => theme.gradients.goldText};
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-
-  @media (max-width: 768px) {
-    font-size: 20px;
-  }
-
-  @media (max-width: 420px) {
-    font-size: 18px;
-  }
-`;
-
-export const ArticleText = styled.p`
-  font-size: 18px;
-  line-height: 1.7;
-  color: ${({ theme }) => theme.colors.text};
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
-
-  @media (max-width: 768px) {
-    font-size: 16.5px;
-    line-height: 1.65;
-  }
-
-  @media (max-width: 420px) {
-    font-size: 15.5px;
-  }
-`;
-export const PromoSection = styled.div`
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: ${({ theme }) => theme.spacing.xl};
-  margin-bottom: ${({ theme }) => theme.spacing["4xl"]};
-
-  @media (max-width: 420px) {
-    gap: ${({ theme }) => theme.spacing.lg};
-  }
-`;
-export const PromoCard = styled.div`
-  background: ${({ theme }) => theme.gradients.card};
-  border-radius: ${({ theme }) => theme.radii.xl};
-  padding: ${({ theme }) => theme.spacing["2xl"]};
-  border: 1px solid rgba(255, 215, 0, 0.2);
-  box-shadow: ${({ theme }) => theme.shadow.xl};
-
-  @media (max-width: 420px) {
-    padding: ${({ theme }) => theme.spacing.lg};
-    border-radius: ${({ theme }) => theme.radii.lg};
-  }
-
-  @media (max-width: 360px) {
-    padding: ${({ theme }) => theme.spacing.md};
-  }
-`;
-
-export const PromoHeader = styled.div`
-  margin-bottom: ${({ theme }) => theme.spacing.xl};
-`;
-
-export const PromoTag = styled.span`
-  font-family: ${({ theme }) => theme.font.family.code};
-
-  display: inline-block;
-  background: ${({ theme }) => theme.gradients.primary};
-  color: ${({ theme }) => theme.colors.dark};
-  padding: ${({ theme }) => theme.spacing.xs} ${({ theme }) => theme.spacing.md};
-  border-radius: ${({ theme }) => theme.radii.full};
-  font-size: 21px;
-  font-weight: ${({ theme }) => theme.font.weight.bold};
-  text-transform: uppercase;
-  margin-bottom: ${({ theme }) => theme.spacing.md};
-
-  @media (max-width: 768px) {
-    font-size: 11px;
-  }
-  @media (max-width: 500px) {
-    font-size: 9px;
-    border-radius: 20px;
-  }
-`;
-export const PromoTitle = styled.h4`
-  font-family: ${({ theme }) => theme.font.family.code};
-  font-size: 18px;
-  font-weight: 900;
-  color: ${({ theme }) => theme.colors.light};
-  margin-bottom: ${({ theme }) => theme.spacing.sm};
-  line-height: 1.15;
-
-  @media (max-width: 768px) {
-    font-size: 20px;
-  }
-
-  @media (max-width: 420px) {
-    font-size: 18px;
-  }
-
-  @media (max-width: 360px) {
-    font-size: 16px;
-  }
-`;
-export const PromoValue = styled.div`
-  font-family: ${({ theme }) => theme.font.family.heading};
-  font-size: ${({ theme }) => theme.font.size["4xl"]};
-  font-weight: ${({ theme }) => theme.font.weight.extrabold};
-  background: ${({ theme }) => theme.gradients.title};
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  line-height: 1.1;
-
-  @media (max-width: 768px) {
-    font-size: 24px;
-  }
-
-  @media (max-width: 420px) {
-    font-size: 20px;
-  }
-
-  @media (max-width: 360px) {
-    font-size: 18px;
-  }
-`;
-export const PromoDetails = styled.div`
-  background: rgba(0, 0, 0, 0.05);
-  border-radius: ${({ theme }) => theme.radii.md};
-  padding: ${({ theme }) => theme.spacing.lg};
-  margin-bottom: ${({ theme }) => theme.spacing.xl};
-  display: flex;
-  flex-direction: column;
-  gap: ${({ theme }) => theme.spacing.sm};
-`;
-export const PromoDetailItem = styled.div`
-  display: grid;
-  grid-template-columns: 150px 1fr;
-  align-items: center;
-  padding: ${({ theme }) => theme.spacing.sm} 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-  font-size: ${({ theme }) => theme.font.size.sm};
-  gap: ${({ theme }) => theme.spacing.md};
-
-  &:last-child {
-    border-bottom: none;
-  }
-
-  span {
-    color: ${({ theme }) => theme.colors.primary};
-    font-weight: 700;
-  }
-
-  strong {
-    color: ${({ theme }) => theme.colors.light};
-    font-weight: 800;
-    text-align: right;
-  }
-
-  @media (max-width: 640px) {
-    grid-template-columns: 1fr;
-    strong {
-      text-align: left;
-      font-size: 13px;
-      opacity: 0.95;
-      margin-top: 2px;
-    }
-  }
-
-  /* 🟣 Для супер-маленьких (<360px) */
-  @media (max-width: 360px) {
-    font-size: 12px;
-    gap: 6px;
-
-    strong {
-      font-size: 12px;
-    }
-  }
-`;
-
-export const PromoFooter = styled.div`
-  display: flex;
-  justify-content: center;
-  @media (max-width: 768px) {
-    justify-content: flex-start;
   }
 `;
 

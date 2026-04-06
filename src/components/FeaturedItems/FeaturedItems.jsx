@@ -1,88 +1,110 @@
 import React from "react";
-import {
-  Wrapper,
-  Header,
-  Title,
-  MoreButton,
-  GamesRow,
-  GameCard,
-  GameImage,
-  GameTitle,
-  FireIcon,
-  CategoriesBar,
-  CategoryItem,
-  ArticleSection,
-  ArticleContainer,
-  ArticleTitle,
-  ArticleParagraph,
-  ArticleHighlight,
-} from "./FeaturedItems.styled";
+import { useTranslation } from "next-i18next";
 import Button from "../UI/Button";
-import Link from "../Link";
+import * as S from "./FeaturedItems.styled";
 
-import { tArray } from "@/utils/i18nSafe";
+export const FeaturedItems = () => {
+  const { t } = useTranslation("common");
+  const featured = t("featured", { returnObjects: true }) || {};
 
-export const FeaturedItems = ({ t }) => {
-  const items = [
-    {
-      title: t("featuredItems.items.0.title"),
-      tag: t("featuredItems.items.0.tag"),
-      description: t("featuredItems.items.0.description"),
-    },
-    {
-      title: t("featuredItems.items.1.title"),
-      tag: t("featuredItems.items.1.tag"),
-      description: t("featuredItems.items.1.description"),
-    },
-    {
-      title: t("featuredItems.items.2.title"),
-      tag: t("featuredItems.items.2.tag"),
-      description: t("featuredItems.items.2.description"),
-    },
-    {
-      title: t("featuredItems.items.3.title"),
-      tag: t("featuredItems.items.3.tag"),
-      description: t("featuredItems.items.3.description"),
-    },
-    {
-      title: t("featuredItems.items.4.title"),
-      tag: t("featuredItems.items.4.tag"),
-      description: t("featuredItems.items.4.description"),
-    },
-    {
-      title: t("featuredItems.items.5.title"),
-      tag: t("featuredItems.items.5.tag"),
-      description: t("featuredItems.items.5.description"),
-    },
-  ];
+  const badgeItems = featured?.badgeItems || [];
+  const plans = featured?.plans || [];
+  const guideTags = featured?.guide?.tags || [];
+  const promoStats = featured?.promo?.stats || [];
 
   return (
-    <Wrapper>
-      <Header>
-        <Title>{t("featuredItems.sectionTitle")}</Title>
-        <p>{t("featuredItems.sectionSubtitle")}</p>
-      </Header>
+    <S.SectionWrapper>
+      <S.GridPattern />
+      <S.GlowTopLeft />
+      <S.GlowBottomRight />
 
-      <ArticleSection>
-        <ArticleContainer>
-          <ArticleTitle>{t("featuredItems.articleTitle")}</ArticleTitle>
-          <ArticleParagraph>
-            {t("featuredItems.articleText")}
-          </ArticleParagraph>
-        </ArticleContainer>
-      </ArticleSection>
+      <S.Container>
+        <S.TopBadge>
+          {badgeItems.map((item, index) => (
+            <React.Fragment key={item || index}>
+              <span>{item}</span>
+              {index !== badgeItems.length - 1 && <S.Dot>•</S.Dot>}
+            </React.Fragment>
+          ))}
+        </S.TopBadge>
 
-      <GamesRow>
-        {items.map((item, idx) => (
-          <GameCard key={idx}>
-            <GameImage src="/icons/app.svg" alt={item.title} />
-            <GameTitle>{item.title}</GameTitle>
-            <FireIcon>🔥</FireIcon>
-            <p>{item.tag}</p>
-            <p>{item.description}</p>
-          </GameCard>
-        ))}
-      </GamesRow>
-    </Wrapper>
+        <S.SectionHeader>
+          <S.SectionTitle>{featured?.title}</S.SectionTitle>
+          <S.SectionSubtitle>{featured?.subtitle}</S.SectionSubtitle>
+        </S.SectionHeader>
+
+        <S.CardsGrid>
+          {plans.map((plan, index) => (
+            <S.PlanCard key={index} $featured={plan?.featured}>
+              <S.PlanTier>{plan?.tier}</S.PlanTier>
+              <S.PlanValue>{plan?.value}</S.PlanValue>
+              <S.PlanTitle>{plan?.title}</S.PlanTitle>
+              <S.PlanDescription>{plan?.description}</S.PlanDescription>
+
+              <S.FeaturesList>
+                {(plan?.features || []).map((feature, featureIndex) => (
+                  <S.FeatureItem key={featureIndex}>{feature}</S.FeatureItem>
+                ))}
+              </S.FeaturesList>
+
+              <S.Actions>
+                <Button as="a" href={plan?.primaryHref || "/register"}>
+                  {plan?.primaryCta}
+                </Button>
+                <Button
+                  as="a"
+                  href={plan?.secondaryHref || "/features"}
+                  $variant="secondary"
+                >
+                  {plan?.secondaryCta}
+                </Button>
+              </S.Actions>
+            </S.PlanCard>
+          ))}
+        </S.CardsGrid>
+
+        <S.BottomGrid>
+          <S.InfoCard>
+            <S.InfoTitle>{featured?.guide?.title}</S.InfoTitle>
+            <S.InfoText>{featured?.guide?.text}</S.InfoText>
+
+            <S.TagList>
+              {guideTags.map((tag, index) => (
+                <S.Tag key={index}>{tag}</S.Tag>
+              ))}
+            </S.TagList>
+          </S.InfoCard>
+
+          <S.PromoCard>
+            <S.PromoTitle>{featured?.promo?.title}</S.PromoTitle>
+            <S.PromoText>{featured?.promo?.text}</S.PromoText>
+
+            <S.StatsRow>
+              {promoStats.map((item, index) => (
+                <S.StatBox key={index}>
+                  <S.StatValue>{item?.value}</S.StatValue>
+                  <S.StatLabel>{item?.label}</S.StatLabel>
+                </S.StatBox>
+              ))}
+            </S.StatsRow>
+
+            <S.Actions>
+              <Button as="a" href={featured?.promo?.primaryHref || "/register"}>
+                {featured?.promo?.primaryCta}
+              </Button>
+              <Button
+                as="a"
+                href={featured?.promo?.secondaryHref || "/faq"}
+                $variant="secondary"
+              >
+                {featured?.promo?.secondaryCta}
+              </Button>
+            </S.Actions>
+          </S.PromoCard>
+        </S.BottomGrid>
+      </S.Container>
+    </S.SectionWrapper>
   );
 };
+
+export default FeaturedItems;

@@ -25,111 +25,488 @@
     "features": "Features",
     "getStarted": "Get Started"
   },
+
   "hero": {
     "home": {
-      "title": "Build Faster. Launch Smarter.",
-      "subtitle": "AppTemplate is a modern Next.js 14 starter for multilingual marketing and landing pages. SEO-optimized, i18n built-in, and ready for global teams.",
-      "cta": "Get Started",
-      "badges": ["⚡ Next.js 14", "🌍 i18n Ready", "📱 Mobile-First", "🔍 SEO-Optimized"],
-      "tags": ["Next.js", "react-i18next", "TypeScript", "Styled Components"]
+      "brand": "AppTemplate",
+      "title": "<span>Next.js 14</span> multilingual starter for modern marketing pages",
+      "subtitle": "SEO-optimized, i18n-ready, and built for landing pages, product launches, and global teams that need a fast and scalable frontend foundation.",
+      "pills": ["Built-in i18n", "SEO Ready", "Fast Deployment"],
+      "primaryCta": "Get Started",
+      "primaryHref": "/get-started",
+      "secondaryCta": "View Features",
+      "secondaryHref": "/features",
+      "tertiaryCta": "Explore Setup",
+      "tertiaryHref": "/get-started",
+      "quickStats": ["RTP-Style UX", "SSL Ready", "24/7 Scalable"],
+      "panelItems": [
+        {
+          "label": "Hot",
+          "value": "Next.js 14 starter"
+        },
+        {
+          "label": "Live",
+          "value": "Built-in multilingual routing"
+        },
+        {
+          "label": "Launch",
+          "value": "Fast deployment workflow"
+        }
+      ],
+      "tickerItems": [
+        "SEO-optimized structure",
+        "Reusable marketing sections",
+        "Global-ready content flow",
+        "Mobile-first responsive UI",
+        "Fast static deployment support"
+      ]
     },
     "features": {
-      "title": "Everything You Need to Launch",
-      "subtitle": "Explore the full feature set of AppTemplate — built with modern web standards and designed for developer productivity and global reach.",
-      "cta": "View All Features",
-      "badges": ["🧩 Modular", "🎨 Themeable", "📦 Ready to Use", "🔧 Configurable"],
-      "tags": ["Components", "Theming", "i18n", "SEO"]
+      "brand": "AppTemplate",
+      "title": "<span>Powerful features</span> for multilingual landing pages",
+      "subtitle": "Discover the sections, workflows, and built-in structure that help teams ship polished multilingual websites faster with less setup overhead.",
+      "pills": ["Reusable Blocks", "Scalable Content", "Clean Architecture"],
+      "primaryCta": "Explore Features",
+      "primaryHref": "/features",
+      "secondaryCta": "Get Started",
+      "secondaryHref": "/get-started",
+      "tertiaryCta": "Back Home",
+      "tertiaryHref": "/",
+      "quickStats": ["Flexible Sections", "SEO Control", "Team Ready"],
+      "panelItems": [
+        {
+          "label": "Core",
+          "value": "Reusable UI sections"
+        },
+        {
+          "label": "I18n",
+          "value": "Translation-friendly structure"
+        },
+        {
+          "label": "Scale",
+          "value": "Built for growing content"
+        }
+      ],
+      "tickerItems": [
+        "Feature-rich starter foundation",
+        "Clean routing and content separation",
+        "Flexible page-building workflow",
+        "Better maintainability for teams",
+        "Consistent UI across languages"
+      ]
     },
     "getStarted": {
-      "title": "Get Started in Minutes",
-      "subtitle": "Clone, configure, and deploy your multilingual marketing site in minutes. AppTemplate handles routing, translations, and SEO out of the box.",
-      "cta": "Clone on GitHub",
-      "badges": ["🚀 Quick Setup", "📝 Simple Config", "💻 Developer Friendly", "🌐 Deploy Anywhere"],
-      "tags": ["git clone", "npm install", "next dev", "vercel deploy"]
+      "brand": "AppTemplate",
+      "title": "<span>Start quickly</span> and launch with confidence",
+      "subtitle": "Set up your multilingual project, organize translations, and deploy faster with a clear structure that is ready for real-world marketing use cases.",
+      "pills": ["Quick Setup", "Clear Workflow", "Deployment Ready"],
+      "primaryCta": "Start Now",
+      "primaryHref": "/get-started",
+      "secondaryCta": "View Features",
+      "secondaryHref": "/features",
+      "tertiaryCta": "Open Home",
+      "tertiaryHref": "/",
+      "quickStats": ["Fast Setup", "Simple Content Flow", "Production Ready"],
+      "panelItems": [
+        {
+          "label": "Step 1",
+          "value": "Clone and install dependencies"
+        },
+        {
+          "label": "Step 2",
+          "value": "Configure locales and content"
+        },
+        {
+          "label": "Step 3",
+          "value": "Build and deploy anywhere"
+        }
+      ],
+      "tickerItems": [
+        "Guided launch experience",
+        "Translation-first content structure",
+        "Modern deployment compatibility",
+        "Responsive UI from the start",
+        "Fast path from setup to publish"
+      ]
     }
   },
-  "about": {
-    "title": "Why AppTemplate?",
-    "subtitle": "Production-ready from day one",
-    "description": "AppTemplate combines Next.js 14, styled-components, and react-i18next to give you a production-ready multilingual marketing site out of the box.",
-    "items": [
-      { "title": "Next.js 14", "text": "Static export, Pages Router, optimized for performance and SEO." },
-      { "title": "i18n Built-in", "text": "Multi-language support with next-i18next and automatic browser locale detection." },
-      { "title": "SEO Optimized", "text": "Meta tags, Open Graph, Twitter Cards, JSON-LD structured data, hreflang, canonical URLs." },
-      { "title": "Styled Components", "text": "Full theming system with SSR support, design tokens, and global styles." },
-      { "title": "TypeScript", "text": "Fully typed pages and utilities for a better developer experience." },
-      { "title": "Static Export", "text": "Deploy anywhere — Vercel, Netlify, GitHub Pages, S3, Cloudflare Pages." }
-    ]
+  "home": {
+    "about": {
+      "title": "Built for Modern Multilingual Marketing Websites",
+      "text": "AppTemplate is a flexible Next.js 14 starter created for teams that need fast, SEO-friendly, and scalable landing pages with built-in internationalization from day one.",
+      "feature1": "Next.js 14 foundation for modern performance and developer workflow",
+      "feature2": "Built-in multilingual structure for global content delivery",
+      "feature3": "SEO-ready architecture for marketing and landing pages",
+      "feature4": "Clean component organization for fast customization",
+      "feature5": "Flexible enough for startups, agencies, and in-house teams",
+      "feature6": "Optimized for quick launch and long-term content scaling",
+      "extraParagraph": "Launching a multilingual website usually requires balancing speed, structure, and maintainability. AppTemplate helps simplify that process with a ready-made foundation tailored to modern marketing use cases.",
+      "extraParagraph2": "Instead of assembling routing, translations, page sections, and SEO settings from scratch, teams can start with a production-friendly base that already supports international growth.",
+      "extraParagraph3": "The template is especially useful for product pages, SaaS websites, startup landing pages, and brand presentations that need to work across multiple regions and languages.",
+      "extraParagraph4": "Its structure is designed to keep content easy to manage while preserving a polished frontend experience for visitors on desktop and mobile devices.",
+      "extraParagraph5": "Because the project is based on Next.js 14, it fits naturally into modern frontend workflows and gives developers a clean starting point for further expansion.",
+      "extraParagraph6": "Marketing teams benefit from a setup that is easy to edit, while developers benefit from reusable sections, scalable organization, and a reliable technical baseline.",
+      "extraParagraph7": "Whether you are building a simple campaign page or a broader multilingual site, the template helps reduce setup time and keeps the project aligned with current best practices.",
+      "extraParagraph8": "This makes AppTemplate a practical option for teams that want to move faster, publish globally, and maintain consistent quality across languages and markets.",
+      "extraButton": "Explore Template",
+      "extra2": {
+        "title": "Ready for Global Teams and Fast Product Launches",
+        "text": "From localized landing pages to international product websites, AppTemplate gives teams a strong starting point with modern UI structure, scalable content organization, and deployment-ready architecture."
+      }
+    }
   },
-  "featuredItems": {
-    "sectionTitle": "Core Features",
-    "sectionSubtitle": "What's included in this template",
-    "articleTitle": "A Modern Stack for Modern Teams",
-    "articleText": "AppTemplate ships with a carefully selected stack of tools that work well together. Each feature is designed to save you time and help you build better multilingual products faster.",
-    "items": [
-      { "title": "Locale Routing", "tag": "Next.js", "description": "Dynamic [locale] routing with static path generation for every language." },
-      { "title": "Theme System", "tag": "Styled Components", "description": "Design tokens for colors, typography, spacing, shadows, and breakpoints." },
-      { "title": "Translations", "tag": "react-i18next", "description": "JSON-based translations per namespace with automatic language fallback." },
-      { "title": "SEO Head", "tag": "next/head", "description": "Full SEO setup with Open Graph, JSON-LD, Twitter Cards, and hreflang." },
-      { "title": "Component Library", "tag": "Reusable", "description": "Header, Footer, Hero, Cards, Buttons, Modals, Banners — ready to use." },
-      { "title": "Static Export", "tag": "Deployment", "description": "Build as a static site and deploy to any hosting provider." }
-    ]
+
+  "featured": {
+    "badgeItems": ["Next.js 14 Ready", "Built-in i18n", "SEO Optimized"],
+    "title": "Featured Plans for Modern Multilingual Launches",
+    "subtitle": "Choose the setup that matches your product stage, content scale, and team workflow. Built for landing pages, marketing sites, and global rollouts.",
+    "plans": [
+      {
+        "tier": "Starter",
+        "value": "Launch Fast",
+        "title": "Starter Marketing Setup",
+        "description": "A practical entry point for small product pages and multilingual campaign launches with a clean structure and essential SEO coverage.",
+        "features": [
+          "Core landing page sections included",
+          "Built-in translation-ready content structure",
+          "Fast setup for product and marketing pages"
+        ],
+        "primaryCta": "Start Now",
+        "primaryHref": "/register",
+        "secondaryCta": "View Details",
+        "secondaryHref": "/features",
+        "featured": false
+      },
+      {
+        "tier": "Growth",
+        "value": "Scale Smarter",
+        "title": "Growth Team Edition",
+        "description": "Designed for teams that need stronger localization workflows, reusable sections, and a scalable structure for expanding markets.",
+        "features": [
+          "Reusable page blocks for faster production",
+          "Better content scaling across multiple locales",
+          "Flexible structure for campaigns and updates"
+        ],
+        "primaryCta": "Build Faster",
+        "primaryHref": "/register",
+        "secondaryCta": "See Benefits",
+        "secondaryHref": "/features",
+        "featured": true
+      },
+      {
+        "tier": "Advanced",
+        "value": "Go Global",
+        "title": "Advanced Global Stack",
+        "description": "A polished option for brands preparing international launches, broader content strategies, and high-quality multilingual presentation.",
+        "features": [
+          "Ideal for global product positioning",
+          "SEO-friendly structure for multiple regions",
+          "Clean developer experience for long-term growth"
+        ],
+        "primaryCta": "Launch Globally",
+        "primaryHref": "/register",
+        "secondaryCta": "Learn More",
+        "secondaryHref": "/features",
+        "featured": false
+      }
+    ],
+    "guide": {
+      "title": "Why Teams Choose AppTemplate",
+      "text": "AppTemplate helps teams move from idea to launch with less setup friction. It combines multilingual readiness, modern Next.js architecture, and a marketing-oriented structure that is easy to extend as your project grows.",
+      "tags": [
+        "Fast launch workflow",
+        "SEO-ready page architecture",
+        "Scalable locale structure",
+        "Reusable content sections",
+        "Built for global teams"
+      ]
+    },
+    "promo": {
+      "title": "Built for High-Impact Marketing Pages",
+      "text": "From startup launches to multilingual brand pages, the template gives teams a reliable foundation with flexible content management and modern frontend structure.",
+      "stats": [
+        {
+          "value": "14",
+          "label": "Powered by Next.js 14"
+        },
+        {
+          "value": "i18n",
+          "label": "Built-in multilingual workflow"
+        },
+        {
+          "value": "SEO",
+          "label": "Optimized for visibility"
+        }
+      ],
+      "primaryCta": "Get Started",
+      "primaryHref": "/register",
+      "secondaryCta": "FAQ",
+      "secondaryHref": "/faq"
+    }
   },
+
   "promoSection": {
     "sectionTitle": "What's Included",
     "sectionSubtitle": "Everything for a production-ready launch",
     "items": [
-      { "title": "MIT License", "badge": "Free to Use", "text": "Use AppTemplate in personal and commercial projects with no restrictions." },
-      { "title": "TypeScript Ready", "badge": "Type Safe", "text": "Full TypeScript support across pages and components for a safe developer experience." },
-      { "title": "SEO Pack", "badge": "Built-in", "text": "Complete SEO setup: meta tags, Open Graph, Twitter Cards, JSON-LD structured data." },
-      { "title": "Two Locales", "badge": "i18n", "text": "English and Spanish out of the box. Add more locales in minutes." },
-      { "title": "Responsive Design", "badge": "Mobile-First", "text": "Fully responsive layout optimized for mobile, tablet, and desktop." },
-      { "title": "Dark Theme", "badge": "Styled", "text": "Beautiful dark theme with a full design token system ready to customize." }
+      {
+        "title": "MIT License",
+        "badge": "Free to Use",
+        "text": "Use AppTemplate in personal and commercial projects with no restrictions."
+      },
+      {
+        "title": "TypeScript Ready",
+        "badge": "Type Safe",
+        "text": "Full TypeScript support across pages and components for a safe developer experience."
+      },
+      {
+        "title": "SEO Pack",
+        "badge": "Built-in",
+        "text": "Complete SEO setup: meta tags, Open Graph, Twitter Cards, JSON-LD structured data."
+      },
+      {
+        "title": "Two Locales",
+        "badge": "i18n",
+        "text": "English and Spanish out of the box. Add more locales in minutes."
+      },
+      {
+        "title": "Responsive Design",
+        "badge": "Mobile-First",
+        "text": "Fully responsive layout optimized for mobile, tablet, and desktop."
+      },
+      {
+        "title": "Dark Theme",
+        "badge": "Styled",
+        "text": "Beautiful dark theme with a full design token system ready to customize."
+      }
     ],
     "terms": "This template is open source and provided as-is. Customize it for your product."
   },
-  "integrations": {
-    "sectionTitle": "Works With Your Stack",
-    "sectionSubtitle": "Deploy anywhere, integrate with any service",
-    "methods": ["Vercel", "Netlify", "GitHub Pages", "AWS S3", "Cloudflare Pages"],
-    "stepsTitle": "Getting Started",
-    "steps": [
-      { "step": "1", "title": "Clone", "text": "Clone the repository to your local machine with git clone." },
-      { "step": "2", "title": "Install", "text": "Run npm install or pnpm install to set up all dependencies." },
-      { "step": "3", "title": "Configure", "text": "Update next-i18next.config.js with your locales and add translation files." },
-      { "step": "4", "title": "Deploy", "text": "Run npm run build and deploy the output to your preferred hosting provider." }
-    ],
-    "securityTitle": "Performance & Best Practices",
-    "securityItems": [
-      "Static site generation (SSG) for maximum performance",
-      "Automatic browser language detection and redirect",
-      "Font optimization with font-display: swap",
-      "Image optimization with Next.js Image component",
-      "Accessible markup with ARIA labels"
-    ],
-    "faq": [
-      { "q": "Can I use this with App Router?", "a": "This template uses Pages Router. You can migrate to App Router with next-intl for a more modern i18n setup." },
-      { "q": "How do I add a new language?", "a": "Add the locale to next-i18next.config.js and create a new folder under public/locales/ with your translation files." },
-      { "q": "Is it free to use?", "a": "Yes. AppTemplate is MIT licensed. Use it freely in personal and commercial projects." },
-      { "q": "Which deployment platforms are supported?", "a": "Any platform that supports static files: Vercel, Netlify, GitHub Pages, AWS S3, Cloudflare Pages, and more." }
-    ]
+  "payments": {
+    "hero": {
+      "title": "Works With Your Modern Stack",
+      "text": "Connect your multilingual Next.js project with the tools, hosting platforms, and workflows your team already uses.",
+      "stats": [
+        { "value": "5+", "label": "Hosting platforms supported" },
+        { "value": "10 min", "label": "Average setup time" },
+        { "value": "100%", "label": "Static deployment ready" }
+      ]
+    },
+    "article": {
+      "title": "Built for Fast Integration and Simple Deployment",
+      "p1": "This template is designed to fit naturally into modern frontend workflows, whether you deploy personal projects, marketing sites, or multilingual business pages.",
+      "p2": "You can use it with common hosting providers, Git-based deployment pipelines, and standard localization workflows without restructuring your application from scratch.",
+      "highlight": "Launch faster with a setup that works well with modern hosting, translation files, and scalable frontend tooling.",
+      "list": [
+        "Ready for static hosting and CI/CD workflows",
+        "Easy integration with locale-based content structure",
+        "Flexible enough for personal, startup, and client projects",
+        "Clean project organization for long-term maintenance"
+      ],
+      "p3": "Whether you are starting a new multilingual landing page or adapting an existing website, the template keeps deployment and localization straightforward.",
+      "cta": "Get Started"
+    },
+    "methods": {
+      "title": "Popular Deployment Options",
+      "items": [
+        {
+          "name": "Vercel",
+          "featured": true,
+          "badge": "Recommended",
+          "details": [
+            { "label": "Setup", "value": "One-click import" },
+            { "label": "Best for", "value": "Next.js projects" },
+            { "label": "Workflow", "value": "Git-based deploys" }
+          ],
+          "cta": "Deploy with Vercel"
+        },
+        {
+          "name": "Netlify",
+          "featured": false,
+          "badge": "Popular",
+          "details": [
+            { "label": "Setup", "value": "Simple build config" },
+            { "label": "Best for", "value": "Static websites" },
+            { "label": "Workflow", "value": "Fast preview deploys" }
+          ],
+          "cta": "Use Netlify"
+        },
+        {
+          "name": "GitHub Pages",
+          "featured": false,
+          "badge": "Free",
+          "details": [
+            { "label": "Setup", "value": "Repository-based" },
+            { "label": "Best for", "value": "Documentation and demos" },
+            { "label": "Workflow", "value": "Static export" }
+          ],
+          "cta": "Publish on GitHub Pages"
+        },
+        {
+          "name": "AWS S3",
+          "featured": false,
+          "badge": "Scalable",
+          "details": [
+            { "label": "Setup", "value": "Bucket deployment" },
+            { "label": "Best for", "value": "Custom infrastructure" },
+            { "label": "Workflow", "value": "Static asset hosting" }
+          ],
+          "cta": "Deploy to AWS"
+        }
+      ]
+    },
+    "process": {
+      "title": "Getting Started",
+      "steps": [
+        {
+          "title": "Clone the Template",
+          "description": "Copy the project to your local environment and prepare it for your own domain, branding, and content.",
+          "link": "/register",
+          "cta": "Clone Project"
+        },
+        {
+          "title": "Install Dependencies",
+          "description": "Run your preferred package manager to install everything required for development, building, and localization.",
+          "link": "/register",
+          "cta": "Install Now"
+        },
+        {
+          "title": "Configure Locales",
+          "description": "Add your languages, update translation resources, and organize content for each locale in a scalable structure.",
+          "link": "/register",
+          "cta": "Configure i18n"
+        },
+        {
+          "title": "Deploy Anywhere",
+          "description": "Build the project and publish it to your preferred platform, from Vercel and Netlify to S3 and static hosting services.",
+          "link": "/register",
+          "cta": "Deploy Project"
+        }
+      ]
+    },
+    "banner": {
+      "title": "Flexible Deployment, Clean Workflow",
+      "text": "Use the same project structure across development, staging, and production with a setup that stays simple as your site grows."
+    },
+    "articleSecurity": {
+      "title": "Performance and Best Practices",
+      "p1": "A well-structured multilingual project should not only be easy to deploy, but also fast to load, maintainable to update, and clear for teams working across multiple locales.",
+      "p2": "This setup supports practical frontend best practices that improve user experience while keeping the codebase organized for future development.",
+      "highlight": "Strong performance starts with clean structure, efficient assets, and predictable deployment workflows.",
+      "p3": "By combining static generation, optimized assets, and accessible markup, you can deliver a professional experience without adding unnecessary complexity.",
+      "list": [
+        "Static generation for fast page delivery",
+        "Clear locale organization for easier maintenance",
+        "Optimized assets for better loading performance",
+        "Accessible structure for a better user experience",
+        "Deployment flexibility across multiple providers"
+      ],
+      "cta": "Explore More"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "items": [
+        {
+          "question": "Can I deploy this project on different hosting platforms?",
+          "answer": "Yes. The template is suitable for modern hosting services such as Vercel, Netlify, GitHub Pages, AWS S3, and other static-friendly platforms."
+        },
+        {
+          "question": "Is it suitable for multilingual websites?",
+          "answer": "Yes. The structure is designed for locale-based content and translation files, making it practical for multilingual landing pages and websites."
+        },
+        {
+          "question": "Do I need to rebuild the project for every update?",
+          "answer": "In most cases, yes. After content or translation changes, you typically rebuild and redeploy so the latest static output is published."
+        },
+        {
+          "question": "Can I use this for client and business projects?",
+          "answer": "Absolutely. The setup is clean enough for portfolio sites, startup pages, product showcases, and multilingual business websites."
+        }
+      ]
+    }
   },
+
   "getStarted": {
-    "articleTitle": "How to Use AppTemplate",
-    "intro": "AppTemplate is designed to get you from zero to a production-ready multilingual site as fast as possible.",
-    "sections": [
-      { "title": "Project Structure", "text": "Pages live in src/pages/[locale]/ — one folder per route, automatically served for each language. Translations are in public/locales/[lang]/common.json." },
-      { "title": "Adding Translations", "text": "Edit the JSON files in public/locales/ to add your own content. The template uses a single common namespace for simplicity." },
-      { "title": "Customizing the Theme", "text": "Edit src/styles/theme.js to update colors, fonts, spacing, and breakpoints. All components read from the theme via styled-components ThemeProvider." },
-      { "title": "SEO Configuration", "text": "Update the seo keys in your locale files and replace YOUR_DOMAIN with your actual domain in the page files." }
+    "eyebrow": "Featured",
+    "title": "Everything You Need to Launch Faster",
+    "subtitle": "AppTemplate gives modern teams a clear starting point for multilingual landing pages, SEO-ready marketing websites, and scalable global content workflows.",
+    "badges": ["SEO Ready", "Fast Launch", "24/7 Scalable", "Mobile Optimized"],
+    "rows": [
+      {
+        "label": "Product",
+        "value": "AppTemplate"
+      },
+      {
+        "label": "Framework",
+        "value": "Next.js 14"
+      },
+      {
+        "label": "Localization",
+        "value": "Built-in i18n structure for multilingual pages"
+      },
+      {
+        "label": "Best For",
+        "value": "Marketing sites, landing pages, SaaS launches, and global brand pages"
+      },
+      {
+        "label": "SEO Setup",
+        "value": "Optimized for discoverability, metadata control, and clean content structure"
+      },
+      {
+        "label": "Deployment",
+        "value": "Ready for Vercel, Netlify, GitHub Pages, AWS S3, and similar hosting platforms"
+      },
+      {
+        "label": "Project Workflow",
+        "value": "Fast setup, reusable sections, and scalable content management"
+      },
+      {
+        "label": "Repository",
+        "value": "View on GitHub",
+        "href": "https://github.com/kekyra007-ux/multilingual-nextjs-template"
+      }
     ],
-    "faq": [
-      { "q": "How do I change the default language?", "a": "Update defaultLocale in next-i18next.config.js. The app will redirect users to their browser language automatically." },
-      { "q": "Can I remove a language?", "a": "Yes. Remove the locale from the locales array in next-i18next.config.js and delete the corresponding folder in public/locales/." },
-      { "q": "How do I customize the color theme?", "a": "Edit src/styles/theme.js. The colors object contains all design tokens used throughout the template." },
-      { "q": "Does this support SSR?", "a": "The default setup uses static export (SSG). Remove output: 'export' from next.config.js to enable SSR." },
-      { "q": "How do I add new pages?", "a": "Create a new file in src/pages/[locale]/ and add the corresponding translations in your locale JSON files." }
-    ]
+    "primaryCta": "Get Started",
+    "primaryHref": "/register",
+    "secondaryCta": "Explore Features",
+    "secondaryHref": "/features",
+    "accordion": {
+      "eyebrow": "Quick Start",
+      "title": "Start Your Project in a Few Clear Steps",
+      "subtitle": "Follow a simple launch flow to configure your multilingual site, prepare content, and publish faster with a production-ready foundation.",
+      "intro": "You can move from setup to launch quickly by following a small sequence of practical steps. Each step is designed to keep the project organized and easy to expand as your content grows.",
+      "items": [
+        {
+          "step": "1",
+          "title": "Create Your Project Base",
+          "text": "Start by cloning the repository and opening the project locally. This gives you the full starter structure, reusable sections, and the default multilingual setup in one place."
+        },
+        {
+          "step": "2",
+          "title": "Install Dependencies",
+          "text": "Run your preferred package manager to install all required dependencies. Once installed, you can launch the development environment and begin customizing the site immediately."
+        },
+        {
+          "step": "3",
+          "title": "Configure Languages and Content",
+          "text": "Add the locales your project needs, connect translation files, and update the page copy for each market. This step helps keep your multilingual structure scalable from the start."
+        },
+        {
+          "step": "4",
+          "title": "Customize Sections and Branding",
+          "text": "Replace the starter content with your own messaging, visuals, and brand styles. Because the layout is already structured for marketing pages, editing content stays fast and predictable."
+        },
+        {
+          "step": "5",
+          "title": "Build and Deploy",
+          "text": "When everything is ready, build the project and deploy it to your preferred hosting platform. The template is prepared for modern workflows, making launch and future updates easier to manage."
+        }
+      ],
+      "primaryCta": "Launch Now",
+      "primaryHref": "/register",
+      "secondaryCta": "Open FAQ",
+      "secondaryHref": "/faq"
+    }
   },
   "footer": {
     "aboutTitle": "AppTemplate",

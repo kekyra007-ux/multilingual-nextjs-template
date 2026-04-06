@@ -1,11 +1,8 @@
 import React from "react";
 import { useTranslation } from "next-i18next";
 import {
-  PaymentsWrapper,
-  PaymentsContainer,
-  SectionHeader,
-  SectionTitle,
-  SectionSubtitle,
+  IntegrationsWrapper,
+  IntegrationsContainer,
   HeroSection,
   HeroContent,
   HeroTitle,
@@ -39,18 +36,6 @@ import {
   StepTitle,
   StepDescription,
   ArticleHighlight,
-  InfoBanner,
-  BannerIcon,
-  BannerContent,
-  BannerTitle,
-  BannerText,
-  SecuritySection,
-  SecurityTitle,
-  SecurityGrid,
-  SecurityCard,
-  SecurityIcon,
-  SecurityCardTitle,
-  SecurityCardText,
   FAQSection,
   FAQTitle,
   FAQList,
@@ -65,8 +50,8 @@ export const Integrations = () => {
   const { t } = useTranslation("common");
 
   return (
-    <PaymentsWrapper>
-      <PaymentsContainer>
+    <IntegrationsWrapper>
+      <IntegrationsContainer>
         {/* Hero Section */}
         <HeroSection>
           <HeroContent>
@@ -172,16 +157,6 @@ export const Integrations = () => {
           </ProcessSteps>
         </ProcessSection>
         {/* Info Banner */}
-        <InfoBanner>
-          <BannerIcon>
-            {" "}
-            <img src="/card.svg" alt="card" />
-          </BannerIcon>
-          <BannerContent>
-            <BannerTitle>{t("payments.banner.title")}</BannerTitle>
-            <BannerText>{t("payments.banner.text")}</BannerText>
-          </BannerContent>
-        </InfoBanner>
         {/* Security */}
         <ArticleSection>
           <ArticleContainer>
@@ -230,7 +205,7 @@ export const Integrations = () => {
             )}
           </FAQList>
         </FAQSection>
-      </PaymentsContainer>
-    </PaymentsWrapper>
+      </IntegrationsContainer>
+    </IntegrationsWrapper>
   );
 };

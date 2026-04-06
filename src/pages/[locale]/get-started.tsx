@@ -66,7 +66,7 @@ export default function GetStartedPage() {
       />
 
       <main>
-        <Hero page="getStarted" />
+        <Hero />
         <GetStarted />
       </main>
     </>

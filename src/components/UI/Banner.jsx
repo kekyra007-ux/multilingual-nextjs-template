@@ -1,31 +1,58 @@
+import { useEffect, useState } from "react";
 import Image from "next/image";
-import { BannerWrap, BannerOverlay, BannerContent } from "./Banner.styled";
+import {
+  BannerWrap,
+  BannerMedia,
+  BannerOverlay,
+  BannerContent,
+  BannerText,
+  BannerKicker,
+  BannerTitle,
+  BannerSubtitle,
+} from "./Banner.styled";
 
-const DEFAULT_ALT =
-  "SH777 Philippines – Trusted Online Casino with Fast Login, Secure Registration, Real-Money Games, Instant GCash Deposits & Same-Day Withdrawals";
+const DEFAULT_ALT = "Banner image";
 
 export const Banner = ({
   image,
   alt = DEFAULT_ALT,
   imgTitle = DEFAULT_ALT,
   priority = false,
-  children,
+  kicker,
+  title,
+  subtitle,
+  children = null,
 }) => {
+  const [offsetY, setOffsetY] = useState(0);
+
   return (
     <BannerWrap>
-      <Image
-        src={image}
-        alt={alt}
-        title={imgTitle}
-        fill
-        priority={priority}
-        sizes="100vw"
-        style={{ objectFit: "cover", zIndex: 1 }}
-      />
+      <BannerMedia
+        style={{ transform: `translate3d(0, ${offsetY}px, 0) scale(1.08)` }}
+      >
+        <Image
+          src={image}
+          alt={alt}
+          title={imgTitle}
+          fill
+          priority={priority}
+          sizes="100vw"
+          style={{ objectFit: "cover" }}
+        />
+      </BannerMedia>
 
       <BannerOverlay />
+      <BannerContent>
+        {(kicker || title || subtitle) && (
+          <BannerText>
+            {kicker && <BannerKicker>{kicker}</BannerKicker>}
+            {title && <BannerTitle>{title}</BannerTitle>}
+            {subtitle && <BannerSubtitle>{subtitle}</BannerSubtitle>}
+          </BannerText>
+        )}
 
-      <BannerContent>{children}</BannerContent>
+        {children}
+      </BannerContent>
     </BannerWrap>
   );
 };

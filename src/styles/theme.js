@@ -1,48 +1,48 @@
 export const colors = {
-  primary: "#F5C84C",
-  secondary: "#8032f5",
-  accent: "#C84BFF",
-  accentSecondary: "#F2D79A",
+  primary: "#D6B25E",
+  secondary: "#5d41f9",
+  accent: "#8B6CFF",
+  accentSecondary: "#E7D7A8",
 
-  background: "#3B146F",
-  backgroundSecondary: "#2B0F56",
-  dark: "#16062B",
-  muted: "#4A1C86",
+  background: "#1A1328",
+  backgroundSecondary: "#140F20",
+  dark: "#0C0914",
+  muted: "#241B36",
 
-  light: "#F6F0FF",
-  lightText: "#F6F0FF",
-  text: "#F6F0FF",
-  textDim: "#D9C9F2",
-  gray: "#BBA6E6",
+  light: "#F6F2FF",
+  lightText: "#F4F0FA",
+  text: "#F4F0FA",
+  textDim: "#B8AFCB",
+  gray: "#8C84A3",
 
-  borderPink: "#C84BFF",
-  overlay: "rgba(8, 3, 18, 0.78)",
-  glow: "rgba(200, 75, 255, 0.34)",
+  borderPink: "#7E68D6",
+  overlay: "rgba(8, 8, 14, 0.76)",
+  glow: "rgba(139, 108, 255, 0.18)",
 
-  success: "#3BEA86",
-  danger: "#FF3B3B",
-  warning: "#F5C84C",
-  info: "#38D6FF",
+  success: "#49C98A",
+  danger: "#E35D6A",
+  warning: "#D6B25E",
+  info: "#5BA8E6",
 };
 
 export const gradients = {
-  primary:
-    "linear-gradient(180deg, #BFF7FF 0%, #48D6FF 35%, #8A5CFF 70%, #C84BFF 100%)",
-  header: "linear-gradient(180deg, #4A1689 0%, #2B0F56 52%, #16062B 100%)",
+  primary: "linear-gradient(180deg, #C9D9FF 0%, #8B6CFF 45%, #5B4BCF 100%)",
+  header: "linear-gradient(180deg, #241B36 0%, #140F20 52%, #0C0914 100%)",
 
-  dark: "linear-gradient(180deg, #2B0F56 0%, #16062B 100%)",
-  light: "linear-gradient(180deg, #F6F0FF 0%, #D9C9F2 100%)",
-  card: "linear-gradient(145deg, #4A1C86 0%, #2B0F56 55%, #16062B 100%)",
+  dark: "linear-gradient(180deg, #181224 0%, #0C0914 100%)",
+  light: "linear-gradient(180deg, #F6F2FF 0%, #D8D1E6 100%)",
+  card: "linear-gradient(145deg, #241B36 0%, #171122 58%, #0C0914 100%)",
 
   overlay:
-    "linear-gradient(180deg, rgba(246,240,255,0.06) 0%, rgba(8,3,18,0.95) 100%)",
+    "linear-gradient(180deg, rgba(246,242,255,0.04) 0%, rgba(12,9,20,0.94) 100%)",
 
-  title: "linear-gradient(180deg, #F6F0FF 0%, #E8C8FF 40%, #da85ff 100%)",
+  title: "linear-gradient(180deg, #F6F2FF 0%, #D8CCF8 45%, #A78BFA 100%)",
 
-  jackpot: "linear-gradient(180deg, #FFE9B8 0%, #F5C84C 52%, #B87412 100%)",
+  jackpot: "linear-gradient(180deg, #F0E2B4 0%, #D6B25E 52%, #8E6A2A 100%)",
 
-  goldText: "linear-gradient(180deg, #F6F0FF 0%, #FFE9B8 52%, #F5C84C 100%)",
+  goldText: "linear-gradient(180deg, #F6F2FF 0%, #EADFB8 52%, #D6B25E 100%)",
 };
+
 const font = {
   family: {
     primary:

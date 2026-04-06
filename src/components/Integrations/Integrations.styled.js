@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
-export const PaymentsWrapper = styled.section`
+export const IntegrationsWrapper = styled.section`
   padding: ${({ theme }) => theme.spacing["4xl"]} 0;
   position: relative;
   overflow: hidden;
 `;
 
-export const PaymentsContainer = styled.div`
+export const IntegrationsContainer = styled.div`
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 ${({ theme }) => theme.container.padding};

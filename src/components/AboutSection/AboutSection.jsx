@@ -22,9 +22,6 @@ export const AboutSection = () => {
       <Container>
         {/* Первый блок */}
         <Content>
-          {/* <ImageWrapper>
-            <img src="/about1.png" loading="lazy" alt="Play Jaguar" />
-          </ImageWrapper> */}
           <TextBlock2>
             <Heading>{t("home.about.title")}</Heading>
             <Paragraph>{t("home.about.text")}</Paragraph>

@@ -25,19 +25,6 @@ export const TopBar = styled.div`
   }
 `;
 
-// export const LogoWrapper = styled.a`
-//   display: flex;
-//   align-items: center;
-//   cursor: pointer;
-//   text-decoration: none;
-// `;
-
-export const LogoText = styled.div`
-  display: flex;
-  align-items: baseline;
-  gap: 2px;
-`;
-
 export const LanguageSwitcher = styled.div`
   display: flex;
   gap: 10px;
@@ -53,7 +40,7 @@ export const NavBar = styled.nav`
 `;
 
 export const Nav = styled.div`
-  max-width: 400px;
+  max-width: 500px;
   width: 100%;
 
   margin: 0 auto;
@@ -67,7 +54,7 @@ export const Nav = styled.div`
 export const NavList = styled.ul`
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 50px;
 
   list-style: none;
   margin: 0;
@@ -88,7 +75,7 @@ export const NavLink = styled.a`
   align-items: center;
   gap: 10px;
 
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 800;
   letter-spacing: 0.4px;
   text-transform: uppercase;
@@ -214,102 +201,6 @@ export const MobileNavLink = styled.a`
   }
 `;
 
-export const PH = styled.span.attrs({ "data-text": "XX" })`
-  font-size: 48px;
-  font-weight: 900;
-  position: relative;
-  display: inline-block;
-
-  background: linear-gradient(
-    120deg,
-    #fff6c8 0%,
-    #ffe08a 20%,
-    #f6b63e 40%,
-    #fff2b0 55%,
-    #d89a18 70%,
-    #fff6c8 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-
-  filter: drop-shadow(-2px -2px 0 rgba(3, 39, 75, 0.95))
-    drop-shadow(2px -2px 0 rgba(6, 107, 208, 0.98))
-    drop-shadow(-2px 2px 0 rgba(20, 90, 160, 0.55))
-    drop-shadow(2px 2px 0 rgba(20, 90, 160, 0.55))
-    drop-shadow(0 6px 12px rgba(40, 160, 220, 0.45))
-    drop-shadow(0 14px 28px rgba(20, 90, 180, 0.4));
-  @media (max-width: 750px) {
-    font-size: 32px;
-  }
-  @media (max-width: 550px) {
-    font-size: 28px;
-  }
-`;
-
-export const Enjoy = styled.span.attrs({ "data-text": "BET" })`
-  font-size: 56px;
-  font-weight: 900;
-  position: relative;
-  display: inline-block;
-
-  background: linear-gradient(
-    120deg,
-    #f8fbff 0%,
-    #e6eef6 18%,
-    #cfd8e3 35%,
-    #ffffff 50%,
-    #b9c4d1 65%,
-    #eef3f8 82%,
-    #ffffff 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  filter: drop-shadow(-2px -2px 0 rgba(3, 41, 79, 0.95))
-    drop-shadow(2px -2px 0 rgba(9, 108, 208, 1))
-    drop-shadow(-2px 2px 0 rgba(20, 90, 160, 0.55))
-    drop-shadow(2px 2px 0 rgba(20, 90, 160, 0.55))
-    drop-shadow(0 6px 12px rgba(40, 160, 220, 0.45))
-    drop-shadow(0 14px 28px rgba(20, 90, 180, 0.4));
-  @media (max-width: 750px) {
-    font-size: 38px;
-  }
-  @media (max-width: 550px) {
-    font-size: 32px;
-  }
-`;
-export const DotCom = styled.span.attrs({ "data-text": "88" })`
-  font-size: 28px;
-  font-weight: 900;
-  position: relative;
-
-  background: linear-gradient(180deg, #f2ffd6 0%, #caff8a 50%, #9be24a 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-
-  &::before {
-    content: attr(data-text);
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-    color: transparent;
-
-    text-shadow:
-      -2px -2px 0 #173000,
-      2px -2px 0 #173000,
-      -2px 2px 0 #0b1800,
-      2px 2px 0 #0b1800,
-      0 4px 6px rgba(0, 0, 0, 0.85);
-  }
-
-  @media (max-width: 750px) {
-    font-size: 22px;
-  }
-
-  @media (max-width: 550px) {
-    font-size: 16px;
-  }
-`;
-
 export const MobileCloseButton = styled.button`
   background: none;
   border: none;
@@ -355,4 +246,110 @@ export const LogoWrapper = styled.a`
   span {
     color: ${({ theme }) => theme.colors.text};
   }
+`;
+
+export const LogoLink = styled.a`
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+  isolation: isolate;
+  transition: transform 0.24s ease;
+
+  &:hover {
+    transform: translateY(-1px);
+  }
+`;
+
+export const LogoMark = styled.span`
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(214, 178, 94, 0.18) 0%,
+      rgba(214, 178, 94, 0.08) 100%
+    ),
+    linear-gradient(180deg, #241b36 0%, #140f20 100%);
+  border: 1px solid rgba(214, 178, 94, 0.24);
+  box-shadow:
+    0 10px 24px rgba(0, 0, 0, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  color: ${({ theme }) => theme.colors.lightText};
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  flex-shrink: 0;
+
+  @media (max-width: 576px) {
+    width: 38px;
+    height: 38px;
+    font-size: 13px;
+    border-radius: 12px;
+  }
+`;
+
+export const LogoTextGroup = styled.span`
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1;
+`;
+
+export const LogoTitle = styled.span`
+  color: ${({ theme }) => theme.colors.lightText};
+  font-size: 22px;
+  line-height: 1;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+
+  @media (max-width: 768px) {
+    font-size: 20px;
+  }
+
+  @media (max-width: 576px) {
+    font-size: 18px;
+  }
+`;
+
+export const LogoSubtitle = styled.span`
+  margin-top: 6px;
+  color: ${({ theme }) => theme.colors.textDim};
+  font-size: 11px;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  white-space: nowrap;
+
+  @media (max-width: 576px) {
+    font-size: 10px;
+    letter-spacing: 0.1em;
+  }
+`;
+
+export const LogoGlow = styled.span`
+  position: absolute;
+  inset: -8px -12px;
+  z-index: 0;
+  border-radius: 20px;
+  background: radial-gradient(
+    circle,
+    rgba(139, 108, 255, 0.14) 0%,
+    transparent 70%
+  );
+  filter: blur(18px);
+  opacity: 0.8;
+  pointer-events: none;
 `;

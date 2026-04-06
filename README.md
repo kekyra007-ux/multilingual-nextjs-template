@@ -1,19 +1,17 @@
 # AppTemplate — Мультиязычный шаблон Next.js
 
-Готовый к продакшену, SEO-оптимизированный мультиязычный шаблон лендинга на **Next.js 14**, **TypeScript**, **styled-components** и **next-i18next**. Клонируй и кастомизируй для своего многоязычного маркетингового сайта за несколько минут.
+Готовый к продакшену, SEO-оптимизированный мультиязычный шаблон лендинга на **Next.js 14**, **styled-components** и **next-i18next**.
 
-## ✨ Возможности
+## Возможности
 
 - **Next.js 14** — современный фреймворк со статическим экспортом
 - **Мультиязычность (i18n)** — английский и испанский включены, легко добавить новые языки
 - **SEO-готовность** — Meta tags, Open Graph, Twitter Cards, JSON-LD, hreflang, canonical URLs
-- **TypeScript** — полная типизация страниц и компонентов
 - **Styled Components** — система дизайн-токенов с темой темного режима
-- **Адаптивный дизайн** — mobile-first, оптимизирован для всех устройств
-- **Статический экспорт** — деплой на Vercel, Netlify, GitHub Pages, S3 и везде
-- **MIT License** — свободно используй и модифицируй
+- **Адаптивный дизайн**
+- **Статический экспорт**
 
-## 🚀 Быстрый старт
+## Быстрый старт
 
 ```bash
 # Клонируй репозиторий
@@ -38,7 +36,6 @@ src/
 │   ├── Header/         # Навигация с переключателем языков
 │   ├── Footer/         # Подвал с ссылками
 │   ├── Hero/           # Hero секция
-│   ├── FeaturesGrid/   # Сетка функций
 │   ├── PromoSection/   # Промо секция
 │   ├── FeaturedItems/  # Избранное содержимое
 │   ├── Integrations/   # Гайды по развёртыванию
@@ -194,37 +191,7 @@ const navItems = [
 ];
 ```
 
-## 🚢 Развёртывание
-
-### Vercel (рекомендуется)
-
-```bash
-npm install -g vercel
-vercel
-```
-
-### Netlify
-
-```bash
-npm run build
-netlify deploy --prod --dir=.next/export
-```
-
-### GitHub Pages
-
-```bash
-npm run build
-# Залей .next/export на gh-pages ветку
-```
-
-### AWS S3
-
-```bash
-npm run build
-# Загрузи .next/export на S3 бакет
-```
-
-## ⚙️ Сборка и запуск
+## Сборка и запуск
 
 ```bash
 # Разработка
@@ -242,9 +209,6 @@ npm run lint
 
 ## ❓ FAQ
 
-**В: Почему Pages Router вместо App Router?**
-О: Pages Router имеет лучшую поддержку i18n с `next-i18next`. App Router требует `next-intl`.
-
 **В: Как изменить язык по умолчанию?**
 О: Отредактируй `defaultLocale` в `next-i18next.config.js`.
 
@@ -257,26 +221,10 @@ npm run lint
 **В: А что с производительностью?**
 О: Статический экспорт обеспечивает быстрые edge-развёртывания. Изображения используют Next.js Image компонент.
 
-## 📖 Tech Stack
+## Tech Stack
 
 - **Framework**: Next.js 14.1.0
 - **Runtime**: React 18.2.0
 - **Styling**: styled-components 6.1.11
 - **Internationalization**: react-i18next 14.1.2 + next-i18next 15.3.0
-- **Language**: TypeScript 5
 - **Package Manager**: npm / pnpm
-
-## 📄 Лицензия
-
-MIT — свободно используй для личных и коммерческих проектов. Смотри [LICENSE](./LICENSE).
-
-## 🙋 Поддержка
-
-Нашёл баг? Есть вопросы? Открой issue на GitHub:
-https://github.com/kekyra007-ux/multilingual-nextjs-template/issues
-
----
-
-**Собрано с ❤️ на Next.js, React и TypeScript**
-
-_Клонируй • Кастомизируй • Запускай_
