@@ -35,7 +35,11 @@ export const Header = () => {
   const navItems = [
     { href: "/", label: t("nav.home"), icon: "/icons/home.svg" },
     { href: "/features", label: t("nav.features"), icon: "/icons/app.svg" },
-    { href: "/get-started", label: t("nav.getStarted"), icon: "/icons/login.svg" },
+    {
+      href: "/get-started",
+      label: t("nav.getStarted"),
+      icon: "/icons/login.svg",
+    },
   ];
   const isActive = (href) => router.pathname === href;
   return (

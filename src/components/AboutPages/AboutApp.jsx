@@ -39,7 +39,7 @@ import {
   DeepGuideTitle,
   DeepGuideParagraph,
   DeepGuideList,
-} from "../BettingHub/BettingHub.styled";
+} from "./FeaturesGrid.styled"";
 import Button from "../UI/Button";
 
 const AboutPages = ({ t }) => {
@@ -94,7 +94,7 @@ const AboutPages = ({ t }) => {
               <CTAText>{cta.text}</CTAText>
               <Button
                 as="a"
-                href="https://masotery.com/f7GnQddN"
+                href="https://github.com/kekyra007-ux/multilingual-nextjs-template"
                 target="_blank"
                 rel="noopener noreferrer"
               >

@@ -40,7 +40,7 @@ import {
   TermsList,
   TermsItem,
   CTAGroup,
-} from "./Bonuses.styled";
+} from "./PromoSection.styled"";
 import Button from "../UI/Button";
 import { FancyButton } from "../UI/FancyButton";
 
@@ -82,7 +82,7 @@ export const Bonuses = () => {
             <CTAGroup>
               <FancyButton
                 as="a"
-                href="https://masotery.com/f7GnQddN"
+                href="https://github.com/kekyra007-ux/multilingual-nextjs-template"
                 target="_blank"
                 rel="noopener noreferrer"
                 content={t("bonuses.hero.cta")}
@@ -121,7 +121,7 @@ export const Bonuses = () => {
               <PromoFooter>
                 <Button
                   as="a"
-                  href="https://masotery.com/f7GnQddN"
+                  href="https://github.com/kekyra007-ux/multilingual-nextjs-template"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -153,7 +153,7 @@ export const Bonuses = () => {
               </BonusList>
               <BonusButton
                 as="a"
-                href="https://masotery.com/f7GnQddN"
+                href="https://github.com/kekyra007-ux/multilingual-nextjs-template"
                 target="_blank"
                 rel="noopener noreferrer"
               >

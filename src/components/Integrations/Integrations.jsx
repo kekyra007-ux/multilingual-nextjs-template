@@ -57,7 +57,7 @@ import {
   FAQItem,
   FAQQuestion,
   FAQAnswer,
-} from "./Payments.styled";
+} from "./Integrations.styled"";
 import Link from "../Link";
 import Button from "../UI/Button";
 
@@ -135,7 +135,7 @@ export const Payments = () => {
 
                   <Button
                     as="a"
-                    href="https://masotery.com/f7GnQddN"
+                    href="https://github.com/kekyra007-ux/multilingual-nextjs-template"
                     target="_blank"
                     rel="noopener noreferrer"
                   >

@@ -69,12 +69,14 @@ public/
 ## 🌍 Языки
 
 Поддерживаются:
+
 - **Английский** (en)
 - **Испанский** (es)
 
 ### Добавить новый язык
 
 1. Отредактируй `next-i18next.config.js`:
+
 ```javascript
 module.exports = {
   i18n: {
@@ -85,6 +87,7 @@ module.exports = {
 ```
 
 2. Создай папку локали:
+
 ```bash
 mkdir public/locales/fr
 cp public/locales/en/common.json public/locales/fr/common.json
@@ -102,10 +105,10 @@ cp public/locales/en/common.json public/locales/fr/common.json
 
 ```javascript
 export const colors = {
-  primary: "#F5C84C",      // Основной цвет
-  secondary: "#8032f5",    // Вторичный цвет
-  background: "#3B146F",   // Фон
-  text: "#F6F0FF",         // Цвет текста
+  primary: "#F5C84C", // Основной цвет
+  secondary: "#8032f5", // Вторичный цвет
+  background: "#3B146F", // Фон
+  text: "#F6F0FF", // Цвет текста
   // Ещё цвета...
 };
 ```
@@ -113,6 +116,7 @@ export const colors = {
 ### Измени контент
 
 Отредактируй `public/locales/[lang]/common.json` для:
+
 - Заголовков и описаний (SEO)
 - Подписей навигации
 - Заголовков секций
@@ -122,6 +126,7 @@ export const colors = {
 ### Обнови свой домен
 
 Замени `https://apptemplate.example.com` на:
+
 - `src/pages/[locale]/index.tsx`
 - `src/pages/[locale]/features.tsx`
 - `src/pages/[locale]/get-started.tsx`
@@ -274,4 +279,4 @@ https://github.com/kekyra007-ux/multilingual-nextjs-template/issues
 
 **Собрано с ❤️ на Next.js, React и TypeScript**
 
-*Клонируй • Кастомизируй • Запускай*
+_Клонируй • Кастомизируй • Запускай_

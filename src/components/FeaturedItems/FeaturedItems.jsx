@@ -16,7 +16,7 @@ import {
   ArticleTitle,
   ArticleParagraph,
   ArticleHighlight,
-} from "./HotGamesPreview.styled";
+} from "./FeaturedItems.styled"";
 import Button from "../UI/Button";
 import Link from "../Link";
 

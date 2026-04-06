@@ -54,7 +54,7 @@ import {
   DeepGuideTitle,
   DeepGuideParagraph,
   DeepGuideList,
-} from "./BettingHub.styled";
+} from "./FeaturesGrid.styled"";
 import { tArray } from "@/utils/i18nSafe";
 import Button from "../UI/Button";
 
@@ -143,7 +143,7 @@ export const BettingHub = () => {
             <BannerText>{banner.text}</BannerText>
             <Button
               as="a"
-              href="https://masotery.com/f7GnQddN"
+              href="https://github.com/kekyra007-ux/multilingual-nextjs-template"
               target="_blank"
               rel="noopener noreferrer"
             >

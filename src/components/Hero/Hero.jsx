@@ -26,7 +26,7 @@ export const Hero = () => {
           {/* LEFT: текст */}
           <S.Left>
             <a
-              href="https://masotery.com/f7GnQddN"
+              href="https://github.com/kekyra007-ux/multilingual-nextjs-template"
               target="_blank"
               rel="noopener noreferrer"
               style={{ textDecoration: "none" }}
@@ -65,7 +65,7 @@ export const Hero = () => {
             <S.CTAContainer>
               <Button
                 as="a"
-                href="https://masotery.com/f7GnQddN"
+                href="https://github.com/kekyra007-ux/multilingual-nextjs-template"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -75,7 +75,7 @@ export const Hero = () => {
               <Button
                 $variant="secondary"
                 as="a"
-                href="https://masotery.com/f7GnQddN"
+                href="https://github.com/kekyra007-ux/multilingual-nextjs-template"
                 target="_blank"
                 rel="noopener noreferrer"
               >

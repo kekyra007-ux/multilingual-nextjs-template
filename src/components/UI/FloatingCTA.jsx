@@ -4,10 +4,10 @@ import {
   FloatingButtonLink,
   IconWrapper,
   Label,
-} from "./ReferralFloatingButton.styled";
+} from "./FloatingCTA.styled";
 
-const ReferralFloatingButton = ({
-  href = "https://masotery.com/f7GnQddN",
+const FloatingCTA = ({
+  href = "https://github.com/kekyra007-ux/multilingual-nextjs-template",
   label = "Invite & Earn",
   ariaLabel = "Open referral link",
 }) => {

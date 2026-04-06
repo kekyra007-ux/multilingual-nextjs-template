@@ -38,7 +38,7 @@ import {
   LongArticleCTA,
   LongArticleCTATitle,
   LongArticleCTAText,
-} from "./Register.styled";
+} from "./GetStarted.styled"";
 
 import Button from "../UI/Button";
 import { tArray } from "@/utils/i18nSafe";

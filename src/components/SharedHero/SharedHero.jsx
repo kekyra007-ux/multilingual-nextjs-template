@@ -54,7 +54,7 @@ export const SharedHero = ({ page }) => {
           <HeroCta>
             <FancyButton
               as="a"
-              href="https://masotery.com/f7GnQddN"
+              href="https://github.com/kekyra007-ux/multilingual-nextjs-template"
               target="_blank"
               rel="noopener noreferrer"
               content={hero.cta}

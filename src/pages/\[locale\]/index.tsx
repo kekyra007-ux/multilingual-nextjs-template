@@ -7,9 +7,7 @@ import { getStaticPaths, makeStaticProps } from "../../../lib/getStatic";
 import { FeaturedItems } from "@/components/FeaturedItems/FeaturedItems";
 import { useRouter } from "next/router";
 import { PromoSection } from "@/components/PromoSection/PromoSection";
-
 import { Banner } from "@/components/UI/Banner";
-
 import FloatingCTA from "@/components/UI/FloatingCTA";
 
 export default function Home() {
@@ -145,7 +143,6 @@ export default function Home() {
       <FloatingCTA
         href="https://github.com/kekyra007-ux/multilingual-nextjs-template"
         label="View on GitHub"
-        ariaLabel="View AppTemplate on GitHub"
       />
 
       <main>
@@ -154,7 +151,7 @@ export default function Home() {
           image="/welcome-banner.png"
           priority
           imgTitle="AppTemplate Homepage"
-          alt="AppTemplate homepage"
+          alt="AppTemplate Template"
         >
           <></>
         </Banner>
